@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dense-Breast Action Kit | Browns Medical Imaging</title>
-    <meta name="description" content="Free Dense-Breast Action Kit: FDA compliance roadmap, ROI calculators, and proven workflows to boost cancer detection by 30-40% while meeting the 2024 mandate.">
+    <meta name="description" content="Free Dense-Breast Action Kit: FDA compliance roadmap, ROI calculator, and proven workflows to boost cancer detection while meeting the 2024 mandate.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Dense-Breast Action Kit - Free Download">
@@ -148,32 +148,6 @@
             font-style: italic;
         }
         
-        /* Book Demo CTA */
-        .book-demo-section {
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: #f8f9fb;
-            border-radius: 10px;
-        }
-        
-        .btn-book-demo-large {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff6b9d, #ff8fb3);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-book-demo-large:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255,107,157,0.3);
-        }
-        
         /* Comparison Table */
         .comparison-table {
             width: 100%;
@@ -288,7 +262,8 @@
             font-size: 0.9em;
         }
         
-        .roi-input-item input {
+        .roi-input-item input,
+        .roi-input-item select {
             width: 100%;
             padding: 8px 12px;
             border: 1px solid #ddd;
@@ -296,9 +271,16 @@
             font-size: 1em;
         }
         
-        .roi-input-item input:focus {
+        .roi-input-item input:focus,
+        .roi-input-item select:focus {
             outline: none;
             border-color: #4a90e2;
+        }
+        
+        .roi-input-item .helper-text {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 3px;
         }
         
         .roi-results {
@@ -363,91 +345,60 @@
             font-size: 0.85em;
             color: #666;
             font-style: italic;
-            text-align: center;
-            margin-top: 10px;
-        }
-        
-        /* FDA Compliance Modal */
-        .compliance-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .compliance-modal.show {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: #999;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .modal-close:hover {
-            color: #333;
-        }
-        
-        .modal-header {
-            color: #4a90e2;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #4a90e2;
-        }
-        
-        .notification-text {
+            margin-top: 15px;
+            padding: 10px;
             background: #f8f9fb;
-            padding: 20px;
-            border-left: 4px solid #ff6b9d;
-            margin: 20px 0;
-            font-style: italic;
-            position: relative;
-        }
-        
-        .copy-btn {
-            background: #4a90e2;
-            color: white;
-            border: none;
-            padding: 10px 20px;
             border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 10px;
         }
         
-        .copy-btn:hover {
-            background: #3a7bc8;
-            transform: translateY(-2px);
+        /* Evidence Box */
+        .evidence-box {
+            background: #e8f2ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4a90e2;
         }
         
-        .copy-btn.copied {
-            background: #4CAF50;
+        .evidence-box h4 {
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+        
+        .evidence-box ul {
+            padding-left: 20px;
+            color: #2c5aa0;
+        }
+        
+        .evidence-box li {
+            margin: 5px 0;
+        }
+        
+        /* Impact Cards */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .impact-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid #ff6b9d;
+        }
+        
+        .impact-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .impact-card h4 {
+            color: #4a90e2;
+            margin-bottom: 10px;
         }
         
         /* Workflow Diagram */
@@ -632,12 +583,20 @@
             text-decoration: underline;
         }
         
+        /* Schedule button fix */
+        .contact-box .btn-primary {
+            background: linear-gradient(135deg, #ff6b9d, #ff8fb3);
+            color: white !important;
+            opacity: 1 !important;
+        }
+        
         /* Footnote styling */
         .footnote {
-            font-size: 0.8em;
+            font-size: 0.9em;
             vertical-align: super;
             color: #4a90e2;
             cursor: help;
+            font-weight: 600;
         }
         
         .citation {
@@ -645,6 +604,19 @@
             color: #666;
             font-style: italic;
             margin-top: 5px;
+        }
+        
+        .citation-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.85em;
+            color: #666;
+        }
+        
+        .citation-section h4 {
+            color: #4a90e2;
+            margin-bottom: 10px;
         }
         
         /* Print Styles */
@@ -683,15 +655,6 @@
                 margin: 0;
                 box-shadow: none;
             }
-            
-            /* Convert tables to cards on mobile */
-            .comparison-table {
-                display: none;
-            }
-            
-            .mobile-accordion {
-                display: block;
-            }
         }
         
         @media (max-width: 576px) {
@@ -721,46 +684,6 @@
                 padding: 20px;
             }
         }
-        
-        /* Mobile accordion for tables */
-        .mobile-accordion {
-            display: none;
-        }
-        
-        @media (max-width: 768px) {
-            .comparison-table {
-                display: none;
-            }
-            
-            .mobile-accordion {
-                display: block;
-            }
-            
-            .accordion-item {
-                background: white;
-                margin-bottom: 10px;
-                border-radius: 8px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                overflow: hidden;
-            }
-            
-            .accordion-header {
-                background: linear-gradient(135deg, #4a90e2, #5da5f0);
-                color: white;
-                padding: 15px;
-                cursor: pointer;
-                font-weight: 600;
-            }
-            
-            .accordion-content {
-                padding: 20px;
-                display: none;
-            }
-            
-            .accordion-item.active .accordion-content {
-                display: block;
-            }
-        }
     </style>
 </head>
 <body>
@@ -783,7 +706,7 @@
         <!-- Tab 1: Advanced Detection Cheatsheet -->
         <div id="detection" class="tab-content active">
             <h2 class="section-header">Advanced Detection Cheatsheet</h2>
-            <p class="section-intro">Compare technologies that boost cancer detection rates by 30-40% in dense breast tissue</p>
+            <p class="section-intro">Compare technologies that boost cancer detection rates in dense breast tissue</p>
             
             <div class="stat-grid">
                 <div class="stat-card">
@@ -795,51 +718,11 @@
                     <span class="label">increased cancer risk</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">30-40%<sup class="footnote">3</sup></span>
-                    <span class="label">detection improvement</span>
-                </div>
-            </div>
-            <p class="citation">
-                <sup>1</sup>Sprague BL, et al. J Natl Cancer Inst. 2014. 
-                <sup>2</sup>McCormack VA, et al. Cancer Epidemiol Biomarkers Prev. 2006. 
-                <sup>3</sup>Tagliafico AS, et al. Eur Radiol. 2016.
-            </p>
-            
-            <!-- Mobile Accordion for Technology Comparison -->
-            <div class="mobile-accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        Fuji ASPIRE Crystalle 16-bit 3D Tomo + CEM
-                    </div>
-                    <div class="accordion-content">
-                        <p><strong>Key Advantage:</strong> 65,536 grayscale levels, ISR reconstruction, 4-second acquisition, Integrated CEM capability</p>
-                        <p><strong>Dense Breast Performance:</strong> Superior tissue differentiation, 30% fewer callbacks, CEM: High-80s to mid-90s% sensitivity</p>
-                        <p><strong>Clinical Impact:</strong> 25% faster exams, Single-system solution, Same-visit problem solving</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        SOFIA 3D ABUS
-                    </div>
-                    <div class="accordion-content">
-                        <p><strong>Key Advantage:</strong> Whole breast coverage, Operator independent, No radiation</p>
-                        <p><strong>Dense Breast Performance:</strong> 35.7% increase in detection, Ideal for category D, Reproducible results</p>
-                        <p><strong>Clinical Impact:</strong> Same-day supplemental, CPT 76641 billable, No compression needed</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        Transpara + Volpara AI
-                    </div>
-                    <div class="accordion-content">
-                        <p><strong>Key Advantage:</strong> 7M mammograms analyzed, Temporal comparison, Objective density</p>
-                        <p><strong>Dense Breast Performance:</strong> 92% AUC maintained, 81.9% sensitivity, 45% interval cancer detection</p>
-                        <p><strong>Clinical Impact:</strong> 44% efficiency gain, 40% callback reduction, Automated compliance</p>
-                    </div>
+                    <span class="number">1 in 5<sup class="footnote">3</sup></span>
+                    <span class="label">radiologists ready to leave</span>
                 </div>
             </div>
             
-            <!-- Desktop Table -->
             <h3 style="color: #4a90e2; margin-top: 30px;">Technology Comparison Matrix</h3>
             
             <table class="comparison-table">
@@ -853,47 +736,93 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Fuji ASPIRE Crystalle<br>16-bit 3D Tomo + CEM</strong></td>
-                        <td>• 65,536 grayscale levels<sup class="footnote">4</sup><br>• ISR reconstruction<br>• 4-second acquisition<br>• Integrated CEM capability</td>
-                        <td>• Superior tissue differentiation<br>• 30% fewer callbacks<br>• CEM: High-80s to mid-90s% sensitivity<sup class="footnote">5</sup></td>
-                        <td>• 25% faster exams<br>• Single-system solution<br>• Same-visit problem solving</td>
+                        <td><strong>Fuji ASPIRE Cristalle<br>16-bit 3D Tomo + CEM</strong></td>
+                        <td>• 65,536 grayscale levels*<br>• ISR reconstruction<br>• 4-second acquisition<br>• Integrated CEM capability</td>
+                        <td>• Superior tissue differentiation<br>• Comfort Paddle™ technology<br>• CEM: High-80s to mid-90s% sensitivity<sup class="footnote">4</sup></td>
+                        <td>• Single-system solution<br>• Same-visit problem solving<br>• Reduced patient anxiety</td>
                     </tr>
                     <tr>
                         <td><strong>SOFIA 3D ABUS</strong><br>(Automated Breast Ultrasound)</td>
                         <td>• Whole breast coverage<br>• Operator independent<br>• No radiation</td>
-                        <td>• 35.7% increase in detection<sup class="footnote">6</sup><br>• Ideal for category D<br>• Reproducible results</td>
+                        <td>• 35.7% increase in detection<sup class="footnote">5</sup><br>• Ideal for category D<br>• Reproducible results</td>
                         <td>• Same-day supplemental<br>• CPT 76641 billable<br>• No compression needed</td>
                     </tr>
                     <tr>
                         <td><strong>Transpara + Volpara AI</strong></td>
                         <td>• 7M mammograms analyzed<br>• Temporal comparison<br>• Objective density</td>
-                        <td>• 92% AUC maintained<sup class="footnote">7</sup><br>• 81.9% sensitivity<br>• 45% interval cancer detection</td>
-                        <td>• 44% efficiency gain<sup class="footnote">8</sup><br>• 40% callback reduction<br>• Automated compliance</td>
+                        <td>• 92% AUC maintained<sup class="footnote">6</sup><br>• 81.9% sensitivity<br>• 45% interval cancer detection</td>
+                        <td>• 44% efficiency gain<sup class="footnote">7</sup><br>• 40% callback reduction<sup class="footnote">7</sup><br>• Automated compliance</td>
                     </tr>
                 </tbody>
             </table>
             <p class="citation">
-                <sup>4</sup>Manufacturer-reported specification. 
-                <sup>5</sup>Jochelson MS, et al. Radiology. 2019. 
-                <sup>6</sup>Brem RF, et al. Radiology. 2015. 
-                <sup>7</sup>Rodriguez-Ruiz A, et al. J Med Screen. 2020. 
-                <sup>8</sup>Larsen M, et al. Radiology. 2022 (MASAI trial).
+                *Manufacturer-reported specification. Results based on published clinical studies.
             </p>
-            
-            <div class="book-demo-section">
-                <h3>Ready to Enhance Your Detection Capabilities?</h3>
-                <p>Schedule a personalized demo to see these technologies in action</p>
-                <a href="#" class="btn-book-demo-large demo-link" data-source="detection">Book Your Demo</a>
-            </div>
             
             <div class="alert alert-info">
                 <strong>💡 Quick Decision Guide:</strong>
                 <ul style="margin-top: 10px; padding-left: 20px;">
-                    <li><strong>Primary Screening:</strong> Fuji ASPIRE Crystalle 16-bit 3D for all patients</li>
+                    <li><strong>Primary Screening:</strong> Fuji ASPIRE Cristalle 16-bit 3D for all patients</li>
                     <li><strong>Dense Categories C/D:</strong> Add SOFIA ABUS for supplemental screening</li>
-                    <li><strong>Problem Solving:</strong> Fuji ASPIRE Crystalle CEM for immediate answers</li>
+                    <li><strong>Problem Solving:</strong> Fuji ASPIRE Cristalle CEM for immediate answers</li>
                     <li><strong>Workflow Optimization:</strong> Transpara + Volpara AI for all exams</li>
                 </ul>
+            </div>
+            
+            <h3 style="color: #ff6b9d; margin-top: 30px;">Key Performance Metrics</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Standard Systems</th>
+                        <th>Advanced Technology</th>
+                        <th>Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bit Depth</td>
+                        <td>10-bit (1,024 levels)</td>
+                        <td>16-bit (65,536 levels)</td>
+                        <td><strong>64x more data*</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Acquisition Time</td>
+                        <td>8-25 seconds</td>
+                        <td>4 seconds</td>
+                        <td><strong>50-84% faster</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Reading Time (with AI)</td>
+                        <td>5-6 minutes</td>
+                        <td>2.8-3.3 minutes</td>
+                        <td><strong>44% faster<sup class="footnote">7</sup></strong></td>
+                    </tr>
+                    <tr>
+                        <td>Callback Rate (with AI)</td>
+                        <td>10-12%</td>
+                        <td>6-7%</td>
+                        <td><strong>40% reduction<sup class="footnote">7</sup></strong></td>
+                    </tr>
+                    <tr>
+                        <td>Radiologist Burnout</td>
+                        <td>20% considering leaving<sup class="footnote">3</sup></td>
+                        <td>Reduced with AI assistance</td>
+                        <td><strong>Improved retention</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="citation-section">
+                <h4>Citations:</h4>
+                <p><sup>1</sup> Sprague BL, et al. J Natl Cancer Inst. 2014;106(10):dju255.</p>
+                <p><sup>2</sup> McCormack VA, et al. Cancer Epidemiol Biomarkers Prev. 2006;15(6):1159-69.</p>
+                <p><sup>3</sup> Radiology Business. "1 in 5 radiologists ready to leave mammography." 2023.</p>
+                <p><sup>4</sup> Jochelson MS, et al. Radiology. 2019;290(2):305-314.</p>
+                <p><sup>5</sup> Brem RF, et al. Radiology. 2015;274(3):663-73.</p>
+                <p><sup>6</sup> Rodriguez-Ruiz A, et al. J Med Screen. 2020;27(1):8-14.</p>
+                <p><sup>7</sup> Larsen M, et al. Radiology. 2022;304(1):41-50 (MASAI trial).</p>
             </div>
         </div>
         
@@ -904,9 +833,7 @@
             
             <div class="alert alert-warning">
                 <strong>⚠️ CRITICAL:</strong> The FDA's final rule requires EXACT standardized language in all patient notifications. This language cannot be altered. 
-                <button class="btn btn-secondary" onclick="showComplianceModal()" style="margin-left: 10px; padding: 8px 20px;">View FDA Language</button>
-                <br><br>
-                <strong style="font-size: 1.1em;">California law expires <span style="font-weight: 900; text-decoration: underline;">January 1, 2025</span> unless renewed.</strong>
+                <a href="https://www.fda.gov/radiation-emitting-products/mqsa-insights/breast-density-notification-national-standard" target="_blank" style="color: #d63384; font-weight: bold;">View FDA Final Rule →</a>
             </div>
             
             <h3 style="color: #4a90e2; margin-top: 30px;">Federal Requirements Checklist</h3>
@@ -930,17 +857,91 @@
                 <div class="checklist-item">Spanish language notifications available</div>
             </div>
             
-            <div class="book-demo-section">
-                <h3>Need Help with Compliance?</h3>
-                <p>Our experts can guide you through FDA requirements and system integration</p>
-                <a href="#" class="btn-book-demo-large demo-link" data-source="compliance">Schedule Compliance Consultation</a>
+            <h3 style="color: #ff6b9d; margin-top: 30px;">FDA-Mandated Patient Notification Language</h3>
+            
+            <div class="alert alert-info">
+                <p><strong>Required Verbatim Text for Dense Breast Patients:</strong></p>
+                <p style="margin-top: 15px; font-style: italic;">
+                    "Breast tissue can be either dense or not dense. Dense tissue makes it harder to find breast cancer on a mammogram and also raises the risk of developing breast cancer. Your breast tissue is dense. In some people with dense tissue, other imaging tests in addition to a mammogram may help find cancers. Talk to your healthcare provider about breast density, risks for breast cancer, and your individual situation."
+                </p>
+            </div>
+            
+            <h3 style="color: #4a90e2; margin-top: 30px;">West Coast State Requirements</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>State</th>
+                        <th>Additional Requirements</th>
+                        <th>Penalties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>California</strong></td>
+                        <td>• Must state "Dense breast tissue is common and is not abnormal"<br>
+                            • Law expires Jan 1, 2025 unless renewed</td>
+                        <td>Standard MQSA enforcement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Washington</strong></td>
+                        <td>• Notification only for categories C/D<br>
+                            • Include "roughly half of all women have dense breast tissue"</td>
+                        <td>No specific state penalties</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Oregon</strong></td>
+                        <td>• Must mention ultrasound, MRI, and gamma imaging options<br>
+                            • Insurance coverage requirements</td>
+                        <td>Healthcare facility enforcement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nevada</strong></td>
+                        <td>• Longest notification text required<br>
+                            • Includes early detection importance</td>
+                        <td><strong>State: Up to $5,000 per violation</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="color: #ff6b9d; margin-top: 30px;">Timeline Requirements</h3>
+            
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <span class="number">30</span>
+                    <span class="label">days to notify patients</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">7</span>
+                    <span class="label">days for urgent findings</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">8th</span>
+                    <span class="label">grade reading level</span>
+                </div>
+            </div>
+            
+            <div class="alert alert-warning">
+                <strong>Federal Penalties for Non-Compliance:<sup class="footnote">8</sup></strong>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Warning letters</li>
+                    <li>Civil money penalties up to ~$11,000 per day</li>
+                    <li>Certificate suspension or revocation</li>
+                    <li>Re-inspection costs: $1,144</li>
+                    <li>FDA can directly notify patients if facility fails</li>
+                </ul>
+            </div>
+            
+            <div class="citation-section">
+                <h4>Citations:</h4>
+                <p><sup>8</sup> FDA MQSA Enforcement Policy. 21 CFR 900.12(j).</p>
             </div>
         </div>
         
         <!-- Tab 3: Profit Blueprint -->
         <div id="profit" class="tab-content">
             <h2 class="section-header">Profit Blueprint</h2>
-            <p class="section-intro">Interactive ROI calculators show how dense breast programs drive revenue while cutting costs</p>
+            <p class="section-intro">Calculate your AI workflow ROI and solve the radiologist shortage crisis</p>
             
             <h3 style="color: #4a90e2;">Quick Reference: CPT Codes & Reimbursement</h3>
             
@@ -950,7 +951,7 @@
                         <th>Procedure</th>
                         <th>CPT Code</th>
                         <th>Medicare Rate*</th>
-                        <th>Commercial Rate*</th>
+                        <th>Commercial Rates</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -958,158 +959,181 @@
                         <td>Screening Mammography (3D)</td>
                         <td class="code">77067</td>
                         <td>$165-185</td>
-                        <td>$250-350</td>
+                        <td>Typically 20-50% higher</td>
                     </tr>
                     <tr>
                         <td>Diagnostic Mammography</td>
                         <td class="code">77065/77066</td>
                         <td>$130-175</td>
-                        <td>$200-300</td>
+                        <td>Typically 20-50% higher</td>
                     </tr>
                     <tr>
                         <td>Automated Breast Ultrasound (ABUS)</td>
                         <td class="code">76641</td>
                         <td>$220-250</td>
-                        <td>$300-400</td>
+                        <td>Typically 20-50% higher</td>
                     </tr>
                     <tr>
                         <td>Contrast-Enhanced Mammography</td>
                         <td class="code">77065/66 + Q9966</td>
                         <td>$275-325</td>
-                        <td>$400-500</td>
+                        <td>Typically 20-50% higher</td>
                     </tr>
                     <tr>
                         <td>AI CAD Analysis</td>
                         <td class="code">Add-on codes vary</td>
                         <td>$35-50</td>
-                        <td>$50-75</td>
+                        <td>Typically 20-50% higher</td>
                     </tr>
                 </tbody>
             </table>
-            <p style="font-size: 0.85em; color: #666; margin-top: 5px;">*Rates vary by region and payer contracts. Source: CMS 2024 Fee Schedule.</p>
+            <p style="font-size: 0.85em; color: #666; margin-top: 5px;">*Medicare rates vary by region. Source: CMS 2024 Fee Schedule.</p>
             
-            <h3 style="color: #ff6b9d; margin-top: 40px;">ROI Calculator #1: Technology Upgrade Impact</h3>
+            <h3 style="color: #ff6b9d; margin-top: 40px;">AI Workflow ROI Calculator</h3>
             
             <div class="roi-section">
-                <h4>Calculate Your Fuji ASPIRE Crystalle ROI</h4>
-                <p style="color: #666; margin-bottom: 20px;">See how faster exams and better quality drive revenue</p>
+                <h4>Calculate Your AI Investment Return & Workforce Impact</h4>
+                <p style="color: #666; margin-bottom: 20px;">Based on the landmark MASAI trial with 105,915 women<sup class="footnote">7</sup></p>
+                
+                <div class="evidence-box">
+                    <h4>📊 Evidence-Based Performance Gains:</h4>
+                    <ul>
+                        <li><strong>44.3% reduction in screen-reading workload</strong> - from 37.5 to 20.9 seconds per exam</li>
+                        <li><strong>40% reduction in callback rates</strong> - fewer unnecessary patient recalls</li>
+                        <li><strong>No increase in reading time</strong> for cases requiring arbitration</li>
+                        <li><strong>Maintained cancer detection rates</strong> while dramatically improving efficiency</li>
+                        <li><strong>Works with ALL major mammography systems</strong> - vendor agnostic</li>
+                    </ul>
+                </div>
                 
                 <div class="roi-input-group">
                     <div class="roi-input-item">
-                        <label for="tech-daily-volume">Current daily volume:</label>
-                        <input type="number" id="tech-daily-volume" placeholder="40" value="40" min="1" max="200" required>
+                        <label>Current system type:</label>
+                        <select id="ai-system-type">
+                            <option value="hologic">Hologic</option>
+                            <option value="ge">GE</option>
+                            <option value="siemens">Siemens</option>
+                            <option value="fuji" selected>Fuji</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                     <div class="roi-input-item">
-                        <label for="tech-exam-time">Average exam time (minutes):</label>
-                        <input type="number" id="tech-exam-time" placeholder="15" value="15" min="5" max="60" required>
+                        <label>Annual mammography volume:</label>
+                        <input type="number" id="ai-volume" placeholder="10000" value="10000">
                     </div>
                     <div class="roi-input-item">
-                        <label for="tech-revenue">Revenue per mammogram:</label>
-                        <input type="number" id="tech-revenue" placeholder="250" value="250" min="50" max="1000" required>
+                        <label>Average exams per radiologist/day:</label>
+                        <input type="number" id="ai-daily-exams" placeholder="50" value="50">
+                        <p class="helper-text">Industry average: 50-80 exams/day</p>
                     </div>
                     <div class="roi-input-item">
-                        <label for="tech-days">Working days per year:</label>
-                        <input type="number" id="tech-days" placeholder="250" value="250" min="200" max="365" required>
+                        <label>Average radiologist hourly rate:</label>
+                        <input type="number" id="ai-rad-rate" placeholder="400" value="400">
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Current callback rate (%):</label>
+                        <input type="number" id="ai-callback-rate" placeholder="10" value="10">
+                        <p class="helper-text">Industry average: 10-12%</p>
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Your dense breast percentage (%):</label>
+                        <input type="number" id="ai-dense-percent" placeholder="50" value="50">
+                        <p class="helper-text">National average: 50%</p>
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Estimated annual AI cost (optional):</label>
+                        <input type="number" id="ai-cost" placeholder="Enter if known" value="">
+                        <p class="helper-text">Leave blank to see gross benefits only</p>
                     </div>
                 </div>
                 
-                <button class="btn btn-primary" onclick="calculateTechROI()">Calculate Technology ROI</button>
-                
-                <div id="tech-results" class="roi-results">
-                    <h4 style="color: #4a90e2; margin-bottom: 20px;">Annual Impact with Fuji ASPIRE Crystalle</h4>
-                    <div class="roi-metric">
-                        <strong>Time saved per exam:</strong>
-                        <span id="tech-time-saved">0</span> minutes (25% faster)
-                    </div>
-                    <div class="roi-metric">
-                        <strong>Additional patients per day:</strong>
-                        <span id="tech-extra-patients">0</span>
-                    </div>
-                    <div class="roi-metric">
-                        <strong>Additional annual exams:</strong>
-                        <span id="tech-annual-exams">0</span>
-                    </div>
-                    <div class="roi-metric">
-                        <strong>Throughput revenue increase:</strong>
-                        <span>$<span id="tech-throughput-revenue">0</span></span>
-                    </div>
-                    <div class="roi-metric">
-                        <strong>Callback reduction savings (30%):</strong>
-                        <span>$<span id="tech-callback-savings">0</span></span>
-                    </div>
-                    <div class="roi-total">
-                        <h4>Total Annual Benefit</h4>
-                        <div class="amount">$<span id="tech-total-benefit">0</span></div>
-                    </div>
-                    <p class="roi-disclaimer">Illustrative ROI. Verify assumptions for your site.</p>
-                    
-                    <div class="book-demo-section" style="margin-top: 20px;">
-                        <h4>Ready to Realize These Benefits?</h4>
-                        <a href="#" class="btn-book-demo-large demo-link tech-roi-link" data-source="tech-roi">Schedule Your ROI Consultation</a>
-                    </div>
-                </div>
-            </div>
-            
-            <h3 style="color: #ff6b9d; margin-top: 40px;">ROI Calculator #2: AI Integration Impact</h3>
-            
-            <div class="roi-section">
-                <h4>Calculate Your Transpara + Volpara AI ROI</h4>
-                <p style="color: #666; margin-bottom: 20px;">Efficiency gains and callback reductions based on MASAI trial data<sup class="footnote">8</sup></p>
-                
-                <div class="roi-input-group">
-                    <div class="roi-input-item">
-                        <label for="ai-volume">Annual mammography volume:</label>
-                        <input type="number" id="ai-volume" placeholder="10000" value="10000" min="1000" max="100000" required>
-                    </div>
-                    <div class="roi-input-item">
-                        <label for="ai-read-time">Reading time per exam (min):</label>
-                        <input type="number" id="ai-read-time" placeholder="5" value="5" min="2" max="30" required>
-                    </div>
-                    <div class="roi-input-item">
-                        <label for="ai-rad-rate">Radiologist hourly rate:</label>
-                        <input type="number" id="ai-rad-rate" placeholder="400" value="400" min="100" max="1000" required>
-                    </div>
-                    <div class="roi-input-item">
-                        <label for="ai-cost">Annual AI subscription:</label>
-                        <input type="number" id="ai-cost" placeholder="60000" value="60000" min="10000" max="200000" required>
-                    </div>
-                </div>
-                
-                <button class="btn btn-secondary" onclick="calculateAIROI()">Calculate AI ROI</button>
+                <button class="btn btn-secondary" onclick="calculateAIROI()">Calculate AI ROI & Workforce Impact</button>
                 
                 <div id="ai-results" class="roi-results">
-                    <h4 style="color: #4a90e2; margin-bottom: 20px;">Annual Impact with AI Integration</h4>
+                    <h4 style="color: #4a90e2; margin-bottom: 20px;">Your AI Investment Analysis</h4>
+                    <p style="color: #4CAF50; font-weight: 600; margin-bottom: 15px;">
+                        ✓ Transpara + Volpara works seamlessly with your <span id="ai-system-name">Fuji</span> system
+                    </p>
+                    
+                    <div class="impact-grid">
+                        <div class="impact-card">
+                            <div class="icon">⏱️</div>
+                            <h4>Time Savings</h4>
+                            <p><strong><span id="ai-hours-saved">0</span></strong> hours saved annually</p>
+                            <p><strong><span id="ai-hours-per-rad">0</span></strong> hours/radiologist/day</p>
+                            <p style="font-size: 0.9em; color: #666;">44% faster reading per exam</p>
+                        </div>
+                        <div class="impact-card">
+                            <div class="icon">📊</div>
+                            <h4>Capacity Impact</h4>
+                            <p>Handle <strong><span id="ai-capacity-increase">0</span>%</strong> more volume</p>
+                            <p>Or <strong><span id="ai-additional-exams">0</span></strong> more exams/year</p>
+                            <p style="font-size: 0.9em; color: #666;">With same staff</p>
+                        </div>
+                        <div class="impact-card">
+                            <div class="icon">💰</div>
+                            <h4>Financial Return</h4>
+                            <p><strong>$<span id="ai-annual-value">0</span></strong> efficiency value</p>
+                            <p><strong>$<span id="ai-callback-savings">0</span></strong> callback savings</p>
+                            <p style="font-size: 0.9em; color: #666;">Total annual benefit</p>
+                        </div>
+                    </div>
+                    
                     <div class="roi-metric">
-                        <strong>Time saved per exam:</strong>
-                        <span id="ai-time-saved">0</span> minutes (44% efficiency<sup class="footnote">8</sup>)
+                        <strong>Quality of life improvement:</strong>
+                        <span>Radiologists can leave on time, reduce weekend reads</span>
                     </div>
                     <div class="roi-metric">
-                        <strong>Total hours saved annually:</strong>
-                        <span id="ai-hours-saved">0</span> hours
+                        <strong>Burnout reduction:</strong>
+                        <span>Addresses #1 cause: excessive workload<sup class="footnote">3</sup></span>
                     </div>
                     <div class="roi-metric">
-                        <strong>Efficiency savings (FTE equivalent):</strong>
-                        <span>$<span id="ai-efficiency-savings">0</span></span>
+                        <strong>Callbacks reduced:</strong>
+                        <span><span id="ai-callbacks-reduced">0</span> fewer unnecessary recalls (40% reduction<sup class="footnote">7</sup>)</span>
                     </div>
                     <div class="roi-metric">
-                        <strong>Callback reduction savings (40%):</strong>
-                        <span>$<span id="ai-callback-savings">0</span></span>
+                        <strong>Dense breast patients:</strong>
+                        <span><span id="ai-dense-patients">0</span> patients with objective density assessment</span>
+                    </div>
+                    <div class="roi-metric">
+                        <strong>FDA compliance:</strong>
+                        <span>100% automated, objective density reporting</span>
                     </div>
                     <div class="roi-metric">
                         <strong>Annual AI investment:</strong>
-                        <span>-$<span id="ai-investment">0</span></span>
+                        <span style="color: #d63384;">-$<span id="ai-investment">0</span></span>
                     </div>
+                    
                     <div class="roi-total">
                         <h4>Net Annual ROI</h4>
                         <div class="amount">$<span id="ai-net-roi">0</span></div>
+                        <p style="font-size: 1em; margin-top: 10px;">
+                            Payback period: <span id="ai-payback">0</span> months
+                        </p>
                     </div>
-                    <p class="roi-disclaimer">Illustrative ROI. Verify assumptions for your site.</p>
                     
-                    <div class="book-demo-section" style="margin-top: 20px;">
-                        <h4>See How AI Can Transform Your Practice</h4>
-                        <a href="#" class="btn-book-demo-large demo-link ai-roi-link" data-source="ai-roi">Book Your AI Demo</a>
+                    <div class="alert alert-info" style="margin-top: 20px;">
+                        <strong>🎯 Strategic Benefits Beyond ROI:</strong>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Retain radiologists (20% considering leaving mammography<sup class="footnote">3</sup>)</li>
+                            <li>Improve work-life balance → reduced overtime costs</li>
+                            <li>Handle volume growth without new hires</li>
+                            <li>Reduce patient anxiety with fewer callbacks</li>
+                            <li>No capital equipment purchase required</li>
+                        </ul>
                     </div>
+                    
+                    <p class="roi-disclaimer">
+                        Calculations based on peer-reviewed MASAI trial data (Radiology 2022): 44.3% workload reduction, 40% callback reduction.
+                        Dense breast prevalence per Sprague et al. JNCI 2014. Individual results may vary.
+                    </p>
                 </div>
+            </div>
+            
+            <div class="citation-section">
+                <h4>Citations:</h4>
+                <p><sup>3</sup> Radiology Business. "1 in 5 radiologists ready to leave mammography." 2023.</p>
+                <p><sup>7</sup> Larsen M, et al. Radiology. 2022;304(1):41-50 (MASAI trial).</p>
             </div>
         </div>
         
@@ -1124,19 +1148,14 @@
                     <span class="label">of patients prefer same-day results</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">44%<sup class="footnote">10</sup></span>
-                    <span class="label">reduction in no-shows</span>
+                    <span class="number">48%<sup class="footnote">10</sup></span>
+                    <span class="label">report improved satisfaction with same-day results</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">92%<sup class="footnote">11</sup></span>
-                    <span class="label">patient satisfaction rate</span>
+                    <span class="number">Improved</span>
+                    <span class="label">adherence & fewer missed appointments<sup class="footnote">11</sup></span>
                 </div>
             </div>
-            <p class="citation">
-                <sup>9</sup>Dabbous FM, et al. Patient Prefer Adherence. 2019.
-                <sup>10</sup>Same-day mammography results reduce patient anxiety and no-shows. J Am Coll Radiol. 2020.
-                <sup>11</sup>Patient satisfaction with immediate results in breast imaging. Breast Cancer Res Treat. 2021.
-            </p>
             
             <h3 style="color: #4a90e2; margin-top: 30px;">Workflow Transformation</h3>
             
@@ -1162,10 +1181,76 @@
                 </div>
             </div>
             
-            <div class="book-demo-section">
-                <h3>Transform Your Workflow Today</h3>
-                <p>Learn how to implement same-day results in your facility</p>
-                <a href="#" class="btn-book-demo-large demo-link" data-source="workflow">Schedule Workflow Consultation</a>
+            <h3 style="color: #ff6b9d; margin-top: 30px;">Implementation Protocol</h3>
+            
+            <div class="checklist">
+                <h3>Morning Preparation</h3>
+                <div class="checklist-item">Review scheduled patients for density history</div>
+                <div class="checklist-item">Ensure ABUS slots available for dense patients</div>
+                <div class="checklist-item">Confirm radiologist availability for immediate reads</div>
+                <div class="checklist-item">Prepare density notification materials</div>
+            </div>
+            
+            <div class="checklist">
+                <h3>During Screening</h3>
+                <div class="checklist-item">Perform Fuji ASPIRE Cristalle 3D mammography</div>
+                <div class="checklist-item">AI triage with Transpara scoring (1-10)</div>
+                <div class="checklist-item">Volpara density assessment (objective measurement)</div>
+                <div class="checklist-item">Immediate radiologist notification for scores 8-10</div>
+            </div>
+            
+            <div class="checklist">
+                <h3>Decision Points</h3>
+                <div class="checklist-item">Transpara 1-7 + Non-dense: Complete, annual follow-up</div>
+                <div class="checklist-item">Transpara 1-7 + Dense C: Discuss supplemental options</div>
+                <div class="checklist-item">Transpara 1-7 + Dense D: Recommend immediate ABUS</div>
+                <div class="checklist-item">Transpara 8-10 any density: Priority diagnostic workup</div>
+                <div class="checklist-item">BI-RADS 0: Immediate CEM if available</div>
+            </div>
+            
+            <h3 style="color: #4a90e2; margin-top: 30px;">Critical Success Factors</h3>
+            
+            <div class="alert alert-info">
+                <strong>Technology Requirements:</strong>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>High-quality primary screening (16-bit recommended)</li>
+                    <li>AI triage capability for immediate risk stratification</li>
+                    <li>Same-day supplemental screening availability</li>
+                    <li>Integrated reporting system</li>
+                </ul>
+            </div>
+            
+            <div class="alert alert-info">
+                <strong>Staffing Considerations:</strong>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Cross-trained technologists (mammography + ABUS)</li>
+                    <li>Dedicated ABUS time slots (30% of dense patients)</li>
+                    <li>Radiologist availability for immediate reads</li>
+                    <li>Patient navigator for same-day coordination</li>
+                </ul>
+            </div>
+            
+            <h3 style="color: #ff6b9d; margin-top: 30px;">Patient Communication Scripts</h3>
+            
+            <div class="checklist">
+                <h3>For Dense Breast Patients</h3>
+                <div style="background: #f8f9fb; padding: 20px; border-radius: 8px; margin: 10px 0;">
+                    <p><strong>Script:</strong> "Your mammogram shows you have dense breast tissue, which is completely normal - about half of all women do. Because dense tissue can make it harder to see potential problems, we'd like to do an additional ultrasound scan today. This will give us a more complete picture and you'll have all your results before you leave."</p>
+                </div>
+            </div>
+            
+            <div class="checklist">
+                <h3>For High AI Score Patients</h3>
+                <div style="background: #f8f9fb; padding: 20px; border-radius: 8px; margin: 10px 0;">
+                    <p><strong>Script:</strong> "Our AI system has flagged an area that needs a closer look. This doesn't mean anything is wrong - it's just being extra cautious. We can do some additional imaging right now to get a clearer picture, so you won't have to come back or wait for results."</p>
+                </div>
+            </div>
+            
+            <div class="citation-section">
+                <h4>Citations:</h4>
+                <p><sup>9</sup> Dabbous FM, et al. Patient Prefer Adherence. 2019;13:333-343.</p>
+                <p><sup>10</sup> Shah C, et al. BMC Women's Health. 2022;22:147.</p>
+                <p><sup>11</sup> Same-day workflows reduce anxiety and improve adherence, helping decrease missed appointments. JAMA Intern Med. 2021.</p>
             </div>
         </div>
         
@@ -1179,7 +1264,7 @@
                 <p><strong>Todd Derohanian</strong></p>
                 <p>📧 <a href="mailto:tderohanian@brownsmedicalimaging.com">tderohanian@brownsmedicalimaging.com</a></p>
                 <p style="margin-top: 20px;">
-                    <a href="#" class="btn btn-primary demo-link" data-source="footer">Schedule Your Consultation</a>
+                    <a href="https://api.leadconnectorhq.com/widget/bookings/radiology-ai-demo" class="btn btn-primary">Schedule Your Consultation</a>
                 </p>
             </div>
             
@@ -1190,39 +1275,8 @@
         </footer>
     </div>
     
-    <!-- FDA Compliance Modal -->
-    <div id="compliance-modal" class="compliance-modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeComplianceModal()">&times;</span>
-            <h2 class="modal-header">FDA-Mandated Patient Notification Language</h2>
-            
-            <p style="margin-bottom: 20px;">The following text must be used verbatim in patient notifications for dense breast tissue:</p>
-            
-            <div class="notification-text" id="dense-notification">
-                "Breast tissue can be either dense or not dense. Dense tissue makes it harder to find breast cancer on a mammogram and also raises the risk of developing breast cancer. Your breast tissue is dense. In some people with dense tissue, other imaging tests in addition to a mammogram may help find cancers. Talk to your healthcare provider about breast density, risks for breast cancer, and your individual situation."
-            </div>
-            
-            <button class="copy-btn" onclick="copyNotificationText('dense-notification')">Copy Dense Breast Notification</button>
-            
-            <p style="margin-top: 30px; margin-bottom: 20px;">For non-dense breast tissue, use this text:</p>
-            
-            <div class="notification-text" id="non-dense-notification">
-                "Breast tissue can be either dense or not dense. Dense tissue makes it harder to find breast cancer on a mammogram and also raises the risk of developing breast cancer. Your breast tissue is not dense. Talk to your healthcare provider about breast density, risks for breast cancer, and your individual situation."
-            </div>
-            
-            <button class="copy-btn" onclick="copyNotificationText('non-dense-notification')">Copy Non-Dense Breast Notification</button>
-            
-            <div class="alert alert-info" style="margin-top: 20px;">
-                <strong>Important:</strong> This language became mandatory on September 10, 2024. State-specific requirements may include additional language but cannot alter the FDA-mandated text.
-            </div>
-        </div>
-    </div>
-    
     <!-- JavaScript -->
     <script>
-        // Constants
-        const BOOK_URL = "https://api.leadconnectorhq.com/widget/bookings/radiology-ai-demo";
-        
         // Tab switching
         function showTab(tabName, element) {
             // Hide all tabs
@@ -1238,37 +1292,6 @@
             
             // Add active class to clicked nav tab
             element.classList.add('active');
-            
-            // Update URL hash
-            window.location.hash = tabName;
-        }
-        
-        // Mobile accordion toggle
-        function toggleAccordion(element) {
-            const parent = element.parentElement;
-            parent.classList.toggle('active');
-        }
-        
-        // Compliance Modal Functions
-        function showComplianceModal() {
-            document.getElementById('compliance-modal').classList.add('show');
-        }
-        
-        function closeComplianceModal() {
-            document.getElementById('compliance-modal').classList.remove('show');
-        }
-        
-        function copyNotificationText(elementId) {
-            const text = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                const button = event.target;
-                button.textContent = 'Copied!';
-                button.classList.add('copied');
-                setTimeout(() => {
-                    button.textContent = button.textContent.includes('Dense') ? 'Copy Dense Breast Notification' : 'Copy Non-Dense Breast Notification';
-                    button.classList.remove('copied');
-                }, 2000);
-            });
         }
         
         // Helper function to safely parse numbers
@@ -1277,173 +1300,118 @@
             return isNaN(parsed) ? defaultValue : parsed;
         }
         
-        // Currency formatting
-        function formatCurrency(amount) {
-            return new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0
-            }).format(amount);
-        }
-        
-        // ROI Calculator Functions with validation
-        function calculateTechROI() {
-            const dailyVolume = safeParseFloat(document.getElementById('tech-daily-volume').value, 40);
-            const examTime = safeParseFloat(document.getElementById('tech-exam-time').value, 15);
-            const revenue = safeParseFloat(document.getElementById('tech-revenue').value, 250);
-            const workDays = safeParseFloat(document.getElementById('tech-days').value, 250);
-            
-            // Validate inputs
-            if (dailyVolume <= 0 || examTime <= 0 || revenue <= 0 || workDays <= 0) {
-                alert('Please enter valid positive numbers for all fields.');
-                return;
-            }
-            
-            // Calculate time savings (25% faster)
-            const timeSaved = examTime * 0.25;
-            
-            // Prevent division by zero
-            const newExamTime = examTime - timeSaved;
-            if (newExamTime <= 0) {
-                alert('Exam time is too low for calculation.');
-                return;
-            }
-            
-            const dailyMinutesSaved = timeSaved * dailyVolume;
-            const extraPatientsPerDay = Math.floor(dailyMinutesSaved / newExamTime);
-            const extraAnnualExams = extraPatientsPerDay * workDays;
-            const throughputRevenue = extraAnnualExams * revenue;
-            
-            // Callback savings (30% reduction on 10% callback rate)
-            const annualVolume = dailyVolume * workDays;
-            const callbacksSaved = annualVolume * 0.1 * 0.3;
-            const callbackSavings = callbacksSaved * 500; // $500 per callback
-            
-            const totalBenefit = throughputRevenue + callbackSavings;
-            
-            // Update display with formatted numbers
-            document.getElementById('tech-time-saved').textContent = timeSaved.toFixed(1);
-            document.getElementById('tech-extra-patients').textContent = extraPatientsPerDay.toLocaleString();
-            document.getElementById('tech-annual-exams').textContent = extraAnnualExams.toLocaleString();
-            document.getElementById('tech-throughput-revenue').textContent = Math.round(throughputRevenue).toLocaleString();
-            document.getElementById('tech-callback-savings').textContent = Math.round(callbackSavings).toLocaleString();
-            document.getElementById('tech-total-benefit').textContent = Math.round(totalBenefit).toLocaleString();
-            
-            // Show results and scroll into view
-            const resultsDiv = document.getElementById('tech-results');
-            resultsDiv.classList.add('show');
-            setTimeout(() => resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
-            
-            // Update booking link with ROI data
-            const roiLink = document.querySelector('.tech-roi-link');
-            if (roiLink) {
-                roiLink.href = `${BOOK_URL}?volume=${annualVolume}&roi=${Math.round(totalBenefit)}&source=tech-roi`;
-            }
-        }
-        
+        // Enhanced AI ROI Calculator
         function calculateAIROI() {
+            const systemType = document.getElementById('ai-system-type').value;
             const volume = safeParseFloat(document.getElementById('ai-volume').value, 10000);
-            const readTime = safeParseFloat(document.getElementById('ai-read-time').value, 5);
+            const dailyExams = safeParseFloat(document.getElementById('ai-daily-exams').value, 50);
             const radRate = safeParseFloat(document.getElementById('ai-rad-rate').value, 400);
-            const aiCost = safeParseFloat(document.getElementById('ai-cost').value, 60000);
+            const callbackRate = safeParseFloat(document.getElementById('ai-callback-rate').value, 10) / 100;
+            const densePercent = safeParseFloat(document.getElementById('ai-dense-percent').value, 50) / 100;
+            const aiCostInput = document.getElementById('ai-cost').value;
+            const aiCost = aiCostInput ? safeParseFloat(aiCostInput) : null;
             
-            // Validate inputs
-            if (volume <= 0 || readTime <= 0 || radRate <= 0 || aiCost < 0) {
-                alert('Please enter valid positive numbers for all fields.');
-                return;
-            }
+            // Update system name display
+            const systemNames = {
+                'hologic': 'Hologic',
+                'ge': 'GE',
+                'siemens': 'Siemens',
+                'fuji': 'Fuji',
+                'other': 'imaging'
+            };
+            document.getElementById('ai-system-name').textContent = systemNames[systemType];
             
-            // Calculate efficiency savings (44% time reduction based on MASAI trial)
-            const timeSavedPerExam = readTime * 0.44;
-            
-            // Prevent division by zero
-            if (timeSavedPerExam >= readTime) {
-                alert('Reading time is too low for calculation.');
-                return;
-            }
-            
+            // Calculate time savings based on MASAI trial
+            // Average reading time calculation based on daily exams
+            const hoursPerDay = 8; // Standard workday
+            const minutesPerExam = (hoursPerDay * 60) / dailyExams;
+            const timeSavedPerExam = minutesPerExam * 0.443; // 44.3% reduction
             const totalMinutesSaved = timeSavedPerExam * volume;
             const hoursSaved = totalMinutesSaved / 60;
-            const efficiencySavings = hoursSaved * radRate;
             
-            // Callback savings (40% reduction on 10% rate)
-            const callbacksSaved = volume * 0.1 * 0.4;
-            const callbackSavings = callbacksSaved * 500;
+            // Calculate hours saved per radiologist per day
+            const workingDays = 250; // Typical working days per year
+            const dailyHoursSaved = hoursSaved / workingDays;
             
-            const netROI = efficiencySavings + callbackSavings - aiCost;
+            // Calculate capacity increase
+            const capacityIncrease = 44.3; // Can handle 44.3% more with same time
+            const additionalExamsPossible = Math.round(volume * 0.443);
             
-            // Update display with formatted numbers
-            document.getElementById('ai-time-saved').textContent = timeSavedPerExam.toFixed(2);
+            // Calculate financial value
+            const efficiencyValue = hoursSaved * radRate;
+            
+            // Calculate callback savings (40% reduction from MASAI)
+            const currentCallbacks = volume * callbackRate;
+            const callbacksReduced = Math.round(currentCallbacks * 0.40);
+            const callbackCost = 500; // Average cost per callback
+            const callbackSavings = callbacksReduced * callbackCost;
+            
+            // Calculate dense breast patients
+            const densePatients = Math.round(volume * densePercent);
+            
+            // Total benefit
+            const totalBenefit = efficiencyValue + callbackSavings;
+            
+            // Update display
             document.getElementById('ai-hours-saved').textContent = Math.round(hoursSaved).toLocaleString();
-            document.getElementById('ai-efficiency-savings').textContent = Math.round(efficiencySavings).toLocaleString();
+            document.getElementById('ai-hours-per-rad').textContent = dailyHoursSaved.toFixed(1);
+            document.getElementById('ai-capacity-increase').textContent = capacityIncrease.toFixed(0);
+            document.getElementById('ai-additional-exams').textContent = additionalExamsPossible.toLocaleString();
+            document.getElementById('ai-annual-value').textContent = Math.round(efficiencyValue).toLocaleString();
             document.getElementById('ai-callback-savings').textContent = Math.round(callbackSavings).toLocaleString();
-            document.getElementById('ai-investment').textContent = aiCost.toLocaleString();
-            document.getElementById('ai-net-roi').textContent = Math.round(netROI).toLocaleString();
+            document.getElementById('ai-callbacks-reduced').textContent = callbacksReduced.toLocaleString();
+            document.getElementById('ai-dense-patients').textContent = densePatients.toLocaleString();
             
-            // Show results and scroll into view
-            const resultsDiv = document.getElementById('ai-results');
-            resultsDiv.classList.add('show');
-            setTimeout(() => resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+            // Show/hide ROI elements based on whether cost was entered
+            const investmentRow = document.querySelector('.roi-metric:has(#ai-investment)').parentElement;
+            const roiTotalDiv = document.querySelector('.roi-total');
             
-            // Update booking link with ROI data
-            const roiLink = document.querySelector('.ai-roi-link');
-            if (roiLink) {
-                roiLink.href = `${BOOK_URL}?volume=${volume}&roi=${Math.round(netROI)}&source=ai-roi`;
+            if (aiCost !== null) {
+                // User entered a cost - show full ROI calculation
+                const netROI = totalBenefit - aiCost;
+                const paybackMonths = aiCost > 0 ? (aiCost / totalBenefit) * 12 : 0;
+                
+                document.getElementById('ai-investment').textContent = aiCost.toLocaleString();
+                document.getElementById('ai-net-roi').textContent = Math.round(netROI).toLocaleString();
+                document.getElementById('ai-payback').textContent = Math.round(paybackMonths);
+                
+                // Show investment row
+                investmentRow.style.display = 'flex';
+                
+                // Update ROI total section for net ROI
+                roiTotalDiv.innerHTML = `
+                    <h4>Net Annual ROI</h4>
+                    <div class="amount">$<span id="ai-net-roi">${Math.round(netROI).toLocaleString()}</span></div>
+                    <p style="font-size: 1em; margin-top: 10px;">
+                        Payback period: <span id="ai-payback">${Math.round(paybackMonths)}</span> months
+                    </p>
+                `;
+            } else {
+                // No cost entered - show gross benefits only
+                investmentRow.style.display = 'none';
+                
+                // Update ROI total section for gross benefits
+                roiTotalDiv.innerHTML = `
+                    <h4>Total Annual Benefit</h4>
+                    <div class="amount">${Math.round(totalBenefit).toLocaleString()}</div>
+                    <p style="font-size: 1em; margin-top: 10px; opacity: 0.9;">
+                        To calculate net ROI, enter your estimated AI cost above
+                    </p>
+                `;
             }
+            
+            // Show results
+            document.getElementById('ai-results').classList.add('show');
         }
         
-        // Setup demo links with tracking
-        function setupDemoLinks() {
-            document.querySelectorAll('.demo-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const source = this.dataset.source || 'unknown';
-                    
-                    // For ROI links, the href is already updated with parameters
-                    if (this.classList.contains('tech-roi-link') || this.classList.contains('ai-roi-link')) {
-                        window.open(this.href, '_blank');
-                    } else {
-                        window.open(`${BOOK_URL}?source=${source}`, '_blank');
-                    }
-                });
-            });
-        }
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('compliance-modal');
-            if (event.target === modal) {
-                closeComplianceModal();
-            }
-        }
-        
-        // Input validation - prevent negative numbers
+        // Input validation - prevent non-numeric input
         document.addEventListener('DOMContentLoaded', function() {
             const inputs = document.querySelectorAll('input[type="number"]');
             inputs.forEach(input => {
                 input.addEventListener('input', function() {
                     if (this.value < 0) this.value = 0;
-                    
-                    // Enforce max values
-                    const max = parseFloat(this.getAttribute('max'));
-                    if (max && parseFloat(this.value) > max) {
-                        this.value = max;
-                    }
                 });
             });
-            
-            // Setup demo links
-            setupDemoLinks();
-            
-            // Check for hash in URL and navigate to tab
-            if (window.location.hash) {
-                const hash = window.location.hash.substring(1);
-                const tabButton = document.querySelector(`.nav-tab[onclick*="${hash}"]`);
-                if (tabButton) {
-                    tabButton.click();
-                }
-            }
         });
     </script>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dense-Breast Action Kit | Browns Medical Imaging</title>
+    <title>Dense-Breast Action Kit</title>
     <meta name="description" content="Free Dense-Breast Action Kit: FDA compliance roadmap, ROI calculator, and proven workflows to boost cancer detection while meeting the 2024 mandate.">
     
     <!-- Open Graph Tags -->
@@ -31,6 +31,16 @@
             margin: 0 auto;
             background: white;
             box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Disclaimer */
+        .disclaimer {
+            background: #f8f9fb;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            border-bottom: 2px solid #e0e0e0;
         }
         
         /* Header */
@@ -231,6 +241,12 @@
             color: #2c5aa0;
         }
         
+        .alert-liability {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            color: #856404;
+        }
+        
         /* ROI Calculator Styles */
         .roi-section {
             background: #f8f9fb;
@@ -322,22 +338,41 @@
             font-weight: 600;
         }
         
-        .roi-total {
-            background: linear-gradient(135deg, #ff6b9d, #ffb3d9);
+        .efficiency-section {
+            background: linear-gradient(135deg, #4a90e2, #6ba5e9);
             color: white;
             padding: 20px;
             border-radius: 8px;
-            margin-top: 20px;
+            margin: 20px 0;
             text-align: center;
         }
         
-        .roi-total h4 {
+        .efficiency-section h4 {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
         
-        .roi-total .amount {
+        .efficiency-section .amount {
             font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .savings-section {
+            background: linear-gradient(135deg, #ff6b9d, #ffb3d9);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .savings-section h4 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .savings-section .amount {
+            font-size: 2em;
             font-weight: 700;
         }
         
@@ -583,7 +618,6 @@
             text-decoration: underline;
         }
         
-        /* Schedule button fix */
         .contact-box .btn-primary {
             background: linear-gradient(135deg, #ff6b9d, #ff8fb3);
             color: white !important;
@@ -687,6 +721,11 @@
     </style>
 </head>
 <body>
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+        This educational resource is for informational purposes only and should not replace professional medical or legal advice.
+    </div>
+    
     <div class="container">
         <!-- Header -->
         <header class="header">
@@ -699,7 +738,7 @@
         <div class="nav-tabs">
             <button class="nav-tab active" onclick="showTab('detection', this)">Advanced Detection</button>
             <button class="nav-tab" onclick="showTab('compliance', this)">FDA Compliance</button>
-            <button class="nav-tab" onclick="showTab('profit', this)">Profit Blueprint</button>
+            <button class="nav-tab" onclick="showTab('airoi', this)">AI ROI Blueprint</button>
             <button class="nav-tab" onclick="showTab('workflow', this)">Fast-Track Workflow</button>
         </div>
         
@@ -710,16 +749,16 @@
             
             <div class="stat-grid">
                 <div class="stat-card">
-                    <span class="number">50%<sup class="footnote">1</sup></span>
+                    <span class="number">43.3%<sup class="footnote">1</sup></span>
                     <span class="label">of women have dense breasts</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">40%<sup class="footnote">2</sup></span>
-                    <span class="label">increased cancer risk</span>
+                    <span class="number">2-4x<sup class="footnote">2</sup></span>
+                    <span class="label">higher cancer risk</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">1 in 5<sup class="footnote">3</sup></span>
-                    <span class="label">radiologists ready to leave</span>
+                    <span class="number">45-54%<sup class="footnote">3</sup></span>
+                    <span class="label">of radiologists report burnout</span>
                 </div>
             </div>
             
@@ -736,93 +775,52 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Fuji ASPIRE Cristalle<br>16-bit 3D Tomo + CEM</strong></td>
-                        <td>• 65,536 grayscale levels*<br>• ISR reconstruction<br>• 4-second acquisition<br>• Integrated CEM capability</td>
-                        <td>• Superior tissue differentiation<br>• Comfort Paddle™ technology<br>• CEM: High-80s to mid-90s% sensitivity<sup class="footnote">4</sup></td>
+                        <td><strong>Fuji ASPIRE Cristalle<br>3D Tomo + CEM</strong></td>
+                        <td>• 65,536 grayscale levels<sup class="footnote">4</sup><br>• ISR reconstruction<br>• 4-second acquisition<sup class="footnote">4</sup><br>• Integrated CEM capability</td>
+                        <td>• Superior tissue differentiation<br>• 30% fewer callbacks<sup class="footnote">4</sup><br>• Comfort Paddle™ technology<br>• 25% faster exams<sup class="footnote">4</sup><br>• CEM: High-80s to mid-90s% sensitivity<sup class="footnote">5</sup></td>
                         <td>• Single-system solution<br>• Same-visit problem solving<br>• Reduced patient anxiety</td>
                     </tr>
                     <tr>
                         <td><strong>SOFIA 3D ABUS</strong><br>(Automated Breast Ultrasound)</td>
                         <td>• Whole breast coverage<br>• Operator independent<br>• No radiation</td>
-                        <td>• 35.7% increase in detection<sup class="footnote">5</sup><br>• Ideal for category D<br>• Reproducible results</td>
-                        <td>• Same-day supplemental<br>• CPT 76641 billable<br>• No compression needed</td>
+                        <td>• ~2.5× more cancers (additional 3.4 / 1,000)<sup class="footnote">6</sup><br>• Ideal for category D<br>• Reproducible results</td>
+                        <td>• Same-day supplemental<br>• CPT 76641 billable<sup class="footnote">7</sup><br>• No compression needed</td>
                     </tr>
                     <tr>
                         <td><strong>Transpara + Volpara AI</strong></td>
-                        <td>• 7M mammograms analyzed<br>• Temporal comparison<br>• Objective density</td>
-                        <td>• 92% AUC maintained<sup class="footnote">6</sup><br>• 81.9% sensitivity<br>• 45% interval cancer detection</td>
-                        <td>• 44% efficiency gain<sup class="footnote">7</sup><br>• 40% callback reduction<sup class="footnote">7</sup><br>• Automated compliance</td>
+                        <td>• 7M mammograms analyzed<sup class="footnote">8</sup><br>• Temporal comparison<sup class="footnote">8</sup><br>• Objective density<sup class="footnote">9</sup><br>• Works with ALL major systems<sup class="footnote">10</sup></td>
+                        <td>• 92% AUC maintained<sup class="footnote">11</sup><br>• 81.9% sensitivity<sup class="footnote">11</sup><br>• 45% interval cancer detection<sup class="footnote">8</sup></td>
+                        <td>• 44% efficiency gain<sup class="footnote">12</sup><br>• Optimized callback rates<br>• Automated compliance</td>
                     </tr>
                 </tbody>
             </table>
-            <p class="citation">
-                *Manufacturer-reported specification. Results based on published clinical studies.
-            </p>
             
             <div class="alert alert-info">
                 <strong>💡 Quick Decision Guide:</strong>
                 <ul style="margin-top: 10px; padding-left: 20px;">
-                    <li><strong>Primary Screening:</strong> Fuji ASPIRE Cristalle 16-bit 3D for all patients</li>
+                    <li><strong>Primary Screening:</strong> Fuji ASPIRE Cristalle 3D for all patients</li>
                     <li><strong>Dense Categories C/D:</strong> Add SOFIA ABUS for supplemental screening</li>
                     <li><strong>Problem Solving:</strong> Fuji ASPIRE Cristalle CEM for immediate answers</li>
                     <li><strong>Workflow Optimization:</strong> Transpara + Volpara AI for all exams</li>
+                    <li><strong>High Accuracy:</strong> SOFIA ABUS provides superior dense tissue visualization<sup class="footnote">13</sup></li>
                 </ul>
             </div>
             
-            <h3 style="color: #ff6b9d; margin-top: 30px;">Key Performance Metrics</h3>
-            
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Metric</th>
-                        <th>Standard Systems</th>
-                        <th>Advanced Technology</th>
-                        <th>Improvement</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bit Depth</td>
-                        <td>10-bit (1,024 levels)</td>
-                        <td>16-bit (65,536 levels)</td>
-                        <td><strong>64x more data*</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Acquisition Time</td>
-                        <td>8-25 seconds</td>
-                        <td>4 seconds</td>
-                        <td><strong>50-84% faster</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Reading Time (with AI)</td>
-                        <td>5-6 minutes</td>
-                        <td>2.8-3.3 minutes</td>
-                        <td><strong>44% faster<sup class="footnote">7</sup></strong></td>
-                    </tr>
-                    <tr>
-                        <td>Callback Rate (with AI)</td>
-                        <td>10-12%</td>
-                        <td>6-7%</td>
-                        <td><strong>40% reduction<sup class="footnote">7</sup></strong></td>
-                    </tr>
-                    <tr>
-                        <td>Radiologist Burnout</td>
-                        <td>20% considering leaving<sup class="footnote">3</sup></td>
-                        <td>Reduced with AI assistance</td>
-                        <td><strong>Improved retention</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-            
             <div class="citation-section">
                 <h4>Citations:</h4>
-                <p><sup>1</sup> Sprague BL, et al. J Natl Cancer Inst. 2014;106(10):dju255.</p>
-                <p><sup>2</sup> McCormack VA, et al. Cancer Epidemiol Biomarkers Prev. 2006;15(6):1159-69.</p>
-                <p><sup>3</sup> Radiology Business. "1 in 5 radiologists ready to leave mammography." 2023.</p>
-                <p><sup>4</sup> Jochelson MS, et al. Radiology. 2019;290(2):305-314.</p>
-                <p><sup>5</sup> Brem RF, et al. Radiology. 2015;274(3):663-73.</p>
-                <p><sup>6</sup> Rodriguez-Ruiz A, et al. J Med Screen. 2020;27(1):8-14.</p>
-                <p><sup>7</sup> Larsen M, et al. Radiology. 2022;304(1):41-50 (MASAI trial).</p>
+                <p><sup>1</sup> FDA. Important Information Final Rule to Amend MQSA. 2024.</p>
+                <p><sup>2</sup> McCormack VA, et al. Breast density and parenchymal patterns as markers of breast cancer risk. Cancer Epidemiol Biomarkers Prev. 2006;15(6):1159-69.</p>
+                <p><sup>3</sup> Kang K, et al. Burnout Among Radiologists: A Systematic Review and Meta-Analysis. AJR Am J Roentgenol. 2024;222(2).</p>
+                <p><sup>4</sup> Fujifilm Healthcare. ASPIRE Cristalle Technical Specifications (Manufacturer specification). 2024.</p>
+                <p><sup>5</sup> Jochelson MS, et al. Contrast-enhanced Mammography: State of the Art. Radiology. 2019;299(1):36-48.</p>
+                <p><sup>6</sup> Brem RF, et al. Assessing improvement in detection of breast cancer with three-dimensional automated breast US in women with dense breast tissue. Radiology. 2015;274(3):663-73.</p>
+                <p><sup>7</sup> American Medical Association. CPT Code 76641. 2024.</p>
+                <p><sup>8</sup> ScreenPoint Medical. Transpara Clinical Evidence Portfolio (Manufacturer specification). 2024.</p>
+                <p><sup>9</sup> Volpara Health. TruDensity Technical Documentation. 2024.</p>
+                <p><sup>10</sup> ScreenPoint Medical. System Compatibility Documentation. 2024.</p>
+                <p><sup>11</sup> Rodriguez-Ruiz A, et al. Stand-Alone Artificial Intelligence for Breast Cancer Detection in Mammography. Radiology. 2019;290(2):310-318.</p>
+                <p><sup>12</sup> Lång K, et al. Artificial intelligence-supported screen reading versus standard double reading in the Mammography Screening with Artificial Intelligence trial (MASAI). Lancet Oncol. 2023;24(8):936-944.</p>
+                <p><sup>13</sup> SOFIA Product Information (Manufacturer specification). 2024.</p>
             </div>
         </div>
         
@@ -832,8 +830,18 @@
             <p class="section-intro">Step-by-step checklists for the breast density rule effective September 10, 2024</p>
             
             <div class="alert alert-warning">
-                <strong>⚠️ CRITICAL:</strong> The FDA's final rule requires EXACT standardized language in all patient notifications. This language cannot be altered. 
-                <a href="https://www.fda.gov/radiation-emitting-products/mqsa-insights/breast-density-notification-national-standard" target="_blank" style="color: #d63384; font-weight: bold;">View FDA Final Rule →</a>
+                <strong>⚠️ CRITICAL:</strong> The FDA's final rule requires EXACT standardized language in all patient notifications. This language cannot be altered. Rule effective September 10, 2024<sup class="footnote">1</sup>. 
+            </div>
+            
+            <div class="alert alert-liability">
+                <strong>⚖️ MALPRACTICE LIABILITY CONSIDERATIONS:</strong>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li><strong>Documentation is Defense:</strong> Failure to notify patients of dense breast tissue can result in litigation exposure</li>
+                    <li><strong>Standard of Care:</strong> Courts increasingly expect compliance with FDA notification requirements</li>
+                    <li><strong>Audit Trail Required:</strong> Maintain records of when and how patients were notified</li>
+                    <li><strong>AI Systems Provide Protection:</strong> Automated, objective density assessment creates defensible documentation</li>
+                    <li><strong>Missing Notifications = Liability:</strong> Inconsistent manual assessments increase malpractice risk</li>
+                </ul>
             </div>
             
             <h3 style="color: #4a90e2; margin-top: 30px;">Federal Requirements Checklist</h3>
@@ -843,9 +851,10 @@
                 <div class="checklist-item">Written policy for density assessment and notification</div>
                 <div class="checklist-item">Standardized notification templates (federal + state)</div>
                 <div class="checklist-item">Tracking log showing notification dates</div>
-                <div class="checklist-item">Evidence of 30-day compliance</div>
+                <div class="checklist-item">Evidence of 30-day compliance<sup class="footnote">2</sup></div>
                 <div class="checklist-item">Staff training documentation</div>
                 <div class="checklist-item">Quality assurance program for consistency</div>
+                <div class="checklist-item">Legal-defensible audit trail system</div>
             </div>
             
             <div class="checklist">
@@ -855,305 +864,228 @@
                 <div class="checklist-item">Audit trail capability</div>
                 <div class="checklist-item">Backup notification method (mail/portal)</div>
                 <div class="checklist-item">Spanish language notifications available</div>
+                <div class="checklist-item">Objective AI density assessment integration</div>
             </div>
             
             <h3 style="color: #ff6b9d; margin-top: 30px;">FDA-Mandated Patient Notification Language</h3>
             
             <div class="alert alert-info">
-                <p><strong>Required Verbatim Text for Dense Breast Patients:</strong></p>
+                <p><strong>Required Verbatim Text for Dense Breast Patients:<sup class="footnote">3</sup></strong></p>
                 <p style="margin-top: 15px; font-style: italic;">
                     "Breast tissue can be either dense or not dense. Dense tissue makes it harder to find breast cancer on a mammogram and also raises the risk of developing breast cancer. Your breast tissue is dense. In some people with dense tissue, other imaging tests in addition to a mammogram may help find cancers. Talk to your healthcare provider about breast density, risks for breast cancer, and your individual situation."
                 </p>
             </div>
             
-            <h3 style="color: #4a90e2; margin-top: 30px;">West Coast State Requirements</h3>
-            
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>State</th>
-                        <th>Additional Requirements</th>
-                        <th>Penalties</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>California</strong></td>
-                        <td>• Must state "Dense breast tissue is common and is not abnormal"<br>
-                            • Law expires Jan 1, 2025 unless renewed</td>
-                        <td>Standard MQSA enforcement</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Washington</strong></td>
-                        <td>• Notification only for categories C/D<br>
-                            • Include "roughly half of all women have dense breast tissue"</td>
-                        <td>No specific state penalties</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Oregon</strong></td>
-                        <td>• Must mention ultrasound, MRI, and gamma imaging options<br>
-                            • Insurance coverage requirements</td>
-                        <td>Healthcare facility enforcement</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nevada</strong></td>
-                        <td>• Longest notification text required<br>
-                            • Includes early detection importance</td>
-                        <td><strong>State: Up to $5,000 per violation</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-            
             <h3 style="color: #ff6b9d; margin-top: 30px;">Timeline Requirements</h3>
             
             <div class="stat-grid">
                 <div class="stat-card">
-                    <span class="number">30</span>
+                    <span class="number">30<sup class="footnote">2</sup></span>
                     <span class="label">days to notify patients</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">7</span>
+                    <span class="number">7<sup class="footnote">2</sup></span>
                     <span class="label">days for urgent findings</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">8th</span>
+                    <span class="number">8th<sup class="footnote">4</sup></span>
                     <span class="label">grade reading level</span>
                 </div>
             </div>
             
-            <div class="alert alert-warning">
-                <strong>Federal Penalties for Non-Compliance:<sup class="footnote">8</sup></strong>
-                <ul style="margin-top: 10px; padding-left: 20px;">
-                    <li>Warning letters</li>
-                    <li>Civil money penalties up to ~$11,000 per day</li>
-                    <li>Certificate suspension or revocation</li>
-                    <li>Re-inspection costs: $1,144</li>
-                    <li>FDA can directly notify patients if facility fails</li>
-                </ul>
-            </div>
-            
             <div class="citation-section">
                 <h4>Citations:</h4>
-                <p><sup>8</sup> FDA MQSA Enforcement Policy. 21 CFR 900.12(j).</p>
+                <p><sup>1</sup> FDA. Important Information Final Rule to Amend MQSA. 2024.</p>
+                <p><sup>2</sup> ProAssurance. Breast Density Notification Updated Requirements. 2024.</p>
+                <p><sup>3</sup> DenseBreast-info.org. FDA National Dense Breast Reporting. 2024.</p>
+                <p><sup>4</sup> FDA Guidance Document. Patient Lay Summaries. 2024.</p>
             </div>
         </div>
         
-        <!-- Tab 3: Profit Blueprint -->
-        <div id="profit" class="tab-content">
-            <h2 class="section-header">Profit Blueprint</h2>
-            <p class="section-intro">Calculate your AI workflow ROI and solve the radiologist shortage crisis</p>
+        <!-- Tab 3: AI ROI Blueprint -->
+        <div id="airoi" class="tab-content">
+            <h2 class="section-header">AI ROI Blueprint</h2>
+            <p class="section-intro">Calculate your AI workflow efficiency gains and callback reduction savings</p>
+            <p style="font-style:italic;color:#666;">Results are estimates based on industry averages and will vary by facility.</p>
             
-            <h3 style="color: #4a90e2;">Quick Reference: CPT Codes & Reimbursement</h3>
-            
-            <table class="cpt-table">
-                <thead>
-                    <tr>
-                        <th>Procedure</th>
-                        <th>CPT Code</th>
-                        <th>Medicare Rate*</th>
-                        <th>Commercial Rates</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Screening Mammography (3D)</td>
-                        <td class="code">77067</td>
-                        <td>$165-185</td>
-                        <td>Typically 20-50% higher</td>
-                    </tr>
-                    <tr>
-                        <td>Diagnostic Mammography</td>
-                        <td class="code">77065/77066</td>
-                        <td>$130-175</td>
-                        <td>Typically 20-50% higher</td>
-                    </tr>
-                    <tr>
-                        <td>Automated Breast Ultrasound (ABUS)</td>
-                        <td class="code">76641</td>
-                        <td>$220-250</td>
-                        <td>Typically 20-50% higher</td>
-                    </tr>
-                    <tr>
-                        <td>Contrast-Enhanced Mammography</td>
-                        <td class="code">77065/66 + Q9966</td>
-                        <td>$275-325</td>
-                        <td>Typically 20-50% higher</td>
-                    </tr>
-                    <tr>
-                        <td>AI CAD Analysis</td>
-                        <td class="code">Add-on codes vary</td>
-                        <td>$35-50</td>
-                        <td>Typically 20-50% higher</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p style="font-size: 0.85em; color: #666; margin-top: 5px;">*Medicare rates vary by region. Source: CMS 2024 Fee Schedule.</p>
-            
-            <h3 style="color: #ff6b9d; margin-top: 40px;">AI Workflow ROI Calculator</h3>
+            <h3 style="color: #ff6b9d; margin-top: 40px;">Mammography Callback Reduction Calculator</h3>
             
             <div class="roi-section">
-                <h4>Calculate Your AI Investment Return & Workforce Impact</h4>
-                <p style="color: #666; margin-bottom: 20px;">Based on the landmark MASAI trial with 105,915 women<sup class="footnote">7</sup></p>
+                <h4>Calculate Your Callback Reduction ROI with AI-Enhanced Imaging</h4>
+                <p style="color: #666; margin-bottom: 20px;">Quantify operational savings from reduced callbacks using Transpara AI + Volpara + SOFIA ABUS technology stack</p>
                 
                 <div class="evidence-box">
-                    <h4>📊 Evidence-Based Performance Gains:</h4>
+                    <h4>📊 Technology Performance Evidence:</h4>
                     <ul>
-                        <li><strong>44.3% reduction in screen-reading workload</strong> - from 37.5 to 20.9 seconds per exam</li>
-                        <li><strong>40% reduction in callback rates</strong> - fewer unnecessary patient recalls</li>
-                        <li><strong>No increase in reading time</strong> for cases requiring arbitration</li>
-                        <li><strong>Maintained cancer detection rates</strong> while dramatically improving efficiency</li>
-                        <li><strong>Works with ALL major mammography systems</strong> - vendor agnostic</li>
+                        <li><strong>Transpara AI:</strong> 15-20% callback reduction in clinical studies<sup class="footnote">1</sup></li>
+                        <li><strong>Volpara Density:</strong> 8-10% workflow optimization through objective assessment<sup class="footnote">2</sup></li>
+                        <li><strong>SOFIA ABUS:</strong> 10-12% managed callbacks through supplemental screening<sup class="footnote">3</sup></li>
+                        <li><strong>Combined Stack:</strong> 20-25% total callback reduction potential<sup class="footnote">4</sup></li>
+                        <li><strong>Works with ALL major mammography systems</strong> - vendor agnostic solution</li>
                     </ul>
                 </div>
                 
                 <div class="roi-input-group">
                     <div class="roi-input-item">
-                        <label>Current system type:</label>
-                        <select id="ai-system-type">
-                            <option value="hologic">Hologic</option>
-                            <option value="ge">GE</option>
-                            <option value="siemens">Siemens</option>
-                            <option value="fuji" selected>Fuji</option>
-                            <option value="other">Other</option>
+                        <label>Annual mammography volume:</label>
+                        <input type="number" id="callback-volume" placeholder="5000" value="5000">
+                        <p class="helper-text">Total screening + diagnostic exams per year</p>
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Current callback rate (%):</label>
+                        <input type="number" id="callback-rate" placeholder="10.8" value="10.8" step="0.1">
+                        <p class="helper-text">Industry average: 10-12%<sup class="footnote">5</sup></p>
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Average revenue per mammogram:</label>
+                        <input type="number" id="callback-mammogram-revenue" placeholder="250" value="250">
+                        <p class="helper-text">Medicare: $165-185, Commercial: $250-350</p>
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Radiologist hourly rate:</label>
+                        <input type="number" id="callback-rad-rate" placeholder="300" value="300">
+                        <p class="helper-text">Range: $250-400</p>
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Technologist hourly rate:</label>
+                        <input type="number" id="callback-tech-rate" placeholder="45" value="45">
+                        <p class="helper-text">National average: $45/hour</p>
+                    </div>
+                    <div class="roi-input-item">
+                        <label>Technology selection:</label>
+                        <select id="callback-tech-stack">
+                            <option value="transpara">Transpara AI only (15-20% reduction)</option>
+                            <option value="volpara">Volpara only (8-10% optimization)</option>
+                            <option value="sofia">SOFIA ABUS only (10-12% managed callbacks)</option>
+                            <option value="combined" selected>Combined stack (20-25% reduction)</option>
                         </select>
                     </div>
+                </div>
+                
+                <button class="btn btn-primary" onclick="calculateCallbackROI()">Calculate Callback Reduction ROI</button>
+                
+                <div id="callback-results" class="roi-results">
+                    <h4 style="color: #4a90e2; margin-bottom: 20px;">Annual Callback Reduction Impact</h4>
+                    
+                    <div class="roi-metric">
+                        <strong>Annual callbacks:</strong>
+                        <span id="callback-current-callbacks">0</span>
+                    </div>
+                    <div class="roi-metric">
+                        <strong>Callbacks avoided:</strong>
+                        <span id="callback-avoided">0</span>
+                    </div>
+                    <div class="roi-metric">
+                        <strong>Lost revenue recovered:</strong>
+                        <span>$<span id="callback-lost-revenue">0</span></span>
+                    </div>
+                    <div class="roi-metric">
+                        <strong>Operational cost savings:</strong>
+                        <span>$<span id="callback-operational-savings">0</span></span>
+                    </div>
+                    <div class="roi-metric">
+                        <strong>Total annual savings:</strong>
+                        <span>$<span id="callback-total-roi">0</span></span>
+                    </div>
+                    
+                    <div class="roi-disclaimer">
+                        Note: Callback costs vary from $361-852 per episode depending on complexity.<sup class="footnote">6</sup> This calculator uses conservative estimates.
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="color: #ff6b9d; margin-top: 40px;">AI Workflow Efficiency Calculator</h3>
+            
+            <div class="roi-section">
+                <h4>Calculate Your AI Investment Benefits & Workforce Impact</h4>
+                <p style="color: #666; margin-bottom: 20px;">Based on the landmark MASAI trial with 80,033 women<sup class="footnote">7</sup></p>
+                
+                <div class="roi-input-group">
                     <div class="roi-input-item">
                         <label>Annual mammography volume:</label>
                         <input type="number" id="ai-volume" placeholder="10000" value="10000">
                     </div>
                     <div class="roi-input-item">
-                        <label>Average exams per radiologist/day:</label>
-                        <input type="number" id="ai-daily-exams" placeholder="50" value="50">
-                        <p class="helper-text">Industry average: 50-80 exams/day</p>
-                    </div>
-                    <div class="roi-input-item">
-                        <label>Average radiologist hourly rate:</label>
-                        <input type="number" id="ai-rad-rate" placeholder="400" value="400">
+                        <label>Average reading time per exam (minutes):</label>
+                        <input type="number" id="ai-read-time" placeholder="5" value="5">
                     </div>
                     <div class="roi-input-item">
                         <label>Current callback rate (%):</label>
-                        <input type="number" id="ai-callback-rate" placeholder="10" value="10">
-                        <p class="helper-text">Industry average: 10-12%</p>
+                        <input type="number" id="ai-callback-rate" placeholder="10.8" value="10.8" step="0.1">
+                        <p class="helper-text">For additional callback savings calculation</p>
                     </div>
                     <div class="roi-input-item">
-                        <label>Your dense breast percentage (%):</label>
-                        <input type="number" id="ai-dense-percent" placeholder="50" value="50">
-                        <p class="helper-text">National average: 50%</p>
+                        <label>Radiologist hourly rate:</label>
+                        <input type="number" id="ai-rad-rate" placeholder="400" value="400">
                     </div>
                     <div class="roi-input-item">
-                        <label>Estimated annual AI cost (optional):</label>
+                        <label>Annual AI cost (optional):</label>
                         <input type="number" id="ai-cost" placeholder="Enter if known" value="">
                         <p class="helper-text">Leave blank to see gross benefits only</p>
                     </div>
                 </div>
                 
-                <button class="btn btn-secondary" onclick="calculateAIROI()">Calculate AI ROI & Workforce Impact</button>
+                <button class="btn btn-secondary" onclick="calculateAIROI()">Calculate AI Benefits</button>
                 
                 <div id="ai-results" class="roi-results">
                     <h4 style="color: #4a90e2; margin-bottom: 20px;">Your AI Investment Analysis</h4>
-                    <p style="color: #4CAF50; font-weight: 600; margin-bottom: 15px;">
-                        ✓ Transpara + Volpara works seamlessly with your <span id="ai-system-name">Fuji</span> system
-                    </p>
                     
-                    <div class="impact-grid">
-                        <div class="impact-card">
-                            <div class="icon">⏱️</div>
-                            <h4>Time Savings</h4>
-                            <p><strong><span id="ai-hours-saved">0</span></strong> hours saved annually</p>
-                            <p><strong><span id="ai-hours-per-rad">0</span></strong> hours/radiologist/day</p>
-                            <p style="font-size: 0.9em; color: #666;">44% faster reading per exam</p>
-                        </div>
-                        <div class="impact-card">
-                            <div class="icon">📊</div>
-                            <h4>Capacity Impact</h4>
-                            <p>Handle <strong><span id="ai-capacity-increase">0</span>%</strong> more volume</p>
-                            <p>Or <strong><span id="ai-additional-exams">0</span></strong> more exams/year</p>
-                            <p style="font-size: 0.9em; color: #666;">With same staff</p>
-                        </div>
-                        <div class="impact-card">
-                            <div class="icon">💰</div>
-                            <h4>Financial Return</h4>
-                            <p><strong>$<span id="ai-annual-value">0</span></strong> efficiency value</p>
-                            <p><strong>$<span id="ai-callback-savings">0</span></strong> callback savings</p>
-                            <p style="font-size: 0.9em; color: #666;">Total annual benefit</p>
-                        </div>
+                    <div class="efficiency-section">
+                        <h4>Proven Efficiency Gains</h4>
+                        <div class="amount"><span id="ai-hours-saved">0</span> Hours</div>
+                        <p style="font-size: 1em; margin-top: 10px; opacity: 0.9;">
+                            Radiologist time made available annually
+                        </p>
                     </div>
                     
+                    <div class="roi-metric">
+                        <strong>44% faster reading per exam:</strong>
+                        <span><span id="ai-time-saved">0</span> minutes saved per exam</span>
+                    </div>
+                    <div class="roi-metric">
+                        <strong>Capacity increase:</strong>
+                        <span><span id="ai-capacity-increase">0</span>% more volume with same staff</span>
+                    </div>
+                    <div class="roi-metric">
+                        <strong>Callback reduction benefit:</strong>
+                        <span>$<span id="ai-callback-benefit">0</span> additional savings</span>
+                    </div>
                     <div class="roi-metric">
                         <strong>Quality of life improvement:</strong>
                         <span>Radiologists can leave on time, reduce weekend reads</span>
                     </div>
-                    <div class="roi-metric">
-                        <strong>Burnout reduction:</strong>
-                        <span>Addresses #1 cause: excessive workload<sup class="footnote">3</sup></span>
-                    </div>
-                    <div class="roi-metric">
-                        <strong>Callbacks reduced:</strong>
-                        <span><span id="ai-callbacks-reduced">0</span> fewer unnecessary recalls (40% reduction<sup class="footnote">7</sup>)</span>
-                    </div>
-                    <div class="roi-metric">
-                        <strong>Dense breast patients:</strong>
-                        <span><span id="ai-dense-patients">0</span> patients with objective density assessment</span>
-                    </div>
-                    <div class="roi-metric">
-                        <strong>FDA compliance:</strong>
-                        <span>100% automated, objective density reporting</span>
-                    </div>
-                    <div class="roi-metric">
-                        <strong>Annual AI investment:</strong>
-                        <span style="color: #d63384;">-$<span id="ai-investment">0</span></span>
-                    </div>
-                    
-                    <div class="roi-total">
-                        <h4>Net Annual ROI</h4>
-                        <div class="amount">$<span id="ai-net-roi">0</span></div>
-                        <p style="font-size: 1em; margin-top: 10px;">
-                            Payback period: <span id="ai-payback">0</span> months
-                        </p>
-                    </div>
-                    
-                    <div class="alert alert-info" style="margin-top: 20px;">
-                        <strong>🎯 Strategic Benefits Beyond ROI:</strong>
-                        <ul style="margin-top: 10px; padding-left: 20px;">
-                            <li>Retain radiologists (20% considering leaving mammography<sup class="footnote">3</sup>)</li>
-                            <li>Improve work-life balance → reduced overtime costs</li>
-                            <li>Handle volume growth without new hires</li>
-                            <li>Reduce patient anxiety with fewer callbacks</li>
-                            <li>No capital equipment purchase required</li>
-                        </ul>
-                    </div>
-                    
-                    <p class="roi-disclaimer">
-                        Calculations based on peer-reviewed MASAI trial data (Radiology 2022): 44.3% workload reduction, 40% callback reduction.
-                        Dense breast prevalence per Sprague et al. JNCI 2014. Individual results may vary.
-                    </p>
                 </div>
             </div>
             
             <div class="citation-section">
                 <h4>Citations:</h4>
-                <p><sup>3</sup> Radiology Business. "1 in 5 radiologists ready to leave mammography." 2023.</p>
-                <p><sup>7</sup> Larsen M, et al. Radiology. 2022;304(1):41-50 (MASAI trial).</p>
+                <p><sup>1</sup> Rodriguez-Ruiz A, et al. Stand-Alone Artificial Intelligence for Breast Cancer Detection in Mammography. Radiology. 2019;290(2):310-318.</p>
+                <p><sup>2</sup> Volpara Health Technologies. Clinical Evidence Portfolio for Density Assessment and Workflow Optimization (Manufacturer data). 2024.</p>
+                <p><sup>3</sup> Brem RF, et al. Assessing improvement in detection of breast cancer with three-dimensional automated breast US in women with dense breast tissue. Radiology. 2015;274(3):663-73.</p>
+                <p><sup>4</sup> Multi-modal artificial intelligence for the combination of automated 3D breast ultrasound and mammograms. Insights Imaging. 2023;14(1):13.</p>
+                <p><sup>5</sup> Lehman CD, et al. National Performance Benchmarks for Modern Screening Digital Mammography: Update from the Breast Cancer Surveillance Consortium. Radiology. 2017;283(1):49-58.</p>
+                <p><sup>6</sup> Ong MS, Mandl KD. National expenditure for false-positive mammograms and breast cancer overdiagnoses estimated at $4 billion a year. Health Aff (Millwood). 2015;34(4):576-83.</p>
+                <p><sup>7</sup> Lång K, et al. Artificial intelligence-supported screen reading versus standard double reading in the Mammography Screening with Artificial Intelligence trial (MASAI). Lancet Oncol. 2023;24(8):936-944.</p>
             </div>
         </div>
         
         <!-- Tab 4: Fast-Track Workflow -->
         <div id="workflow" class="tab-content">
             <h2 class="section-header">Fast-Track Workflow Playbook</h2>
-            <p class="section-intro">Proven same-day pathways that reduce anxiety and deliver answers in one visit</p>
+            <p class="section-intro">Proven pathways that reduce anxiety and deliver answers faster</p>
             
             <div class="stat-grid">
                 <div class="stat-card">
-                    <span class="number">67%<sup class="footnote">9</sup></span>
-                    <span class="label">of patients prefer same-day results</span>
+                    <span class="number">48%<sup class="footnote">1</sup></span>
+                    <span class="label">report improved experience with same-day results</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">48%<sup class="footnote">10</sup></span>
-                    <span class="label">report improved satisfaction with same-day results</span>
+                    <span class="number">96.7%<sup class="footnote">1</sup></span>
+                    <span class="label">would recommend same-day results</span>
                 </div>
                 <div class="stat-card">
-                    <span class="number">Improved</span>
-                    <span class="label">adherence & fewer missed appointments<sup class="footnote">11</sup></span>
+                    <span class="number">66% vs 56%<sup class="footnote">2</sup></span>
+                    <span class="label">adherence with same-day access</span>
                 </div>
             </div>
             
@@ -1175,9 +1107,9 @@
                     <div class="workflow-step" data-step="1">Fuji 16-bit screening + AI triage</div>
                     <div class="workflow-step" data-step="2">Immediate density notification</div>
                     <div class="workflow-step" data-step="3">Same-visit ABUS if indicated</div>
-                    <div class="workflow-step" data-step="4">CEM for problem solving</div>
-                    <div class="workflow-step" data-step="5">Results discussion before leaving</div>
-                    <p style="margin-top: 20px; color: #666;"><strong>Total: 1 visit, same-day answers</strong></p>
+                    <div class="workflow-step" data-step="4">CEM for problem solving if needed</div>
+                    <div class="workflow-step" data-step="5">Results within 24-48 hours</div>
+                    <p style="margin-top: 20px; color: #666;"><strong>Total: 1-2 visits, faster answers</strong></p>
                 </div>
             </div>
             
@@ -1187,7 +1119,7 @@
                 <h3>Morning Preparation</h3>
                 <div class="checklist-item">Review scheduled patients for density history</div>
                 <div class="checklist-item">Ensure ABUS slots available for dense patients</div>
-                <div class="checklist-item">Confirm radiologist availability for immediate reads</div>
+                <div class="checklist-item">Confirm radiologist availability for priority reads</div>
                 <div class="checklist-item">Prepare density notification materials</div>
             </div>
             
@@ -1205,72 +1137,43 @@
                 <div class="checklist-item">Transpara 1-7 + Dense C: Discuss supplemental options</div>
                 <div class="checklist-item">Transpara 1-7 + Dense D: Recommend immediate ABUS</div>
                 <div class="checklist-item">Transpara 8-10 any density: Priority diagnostic workup</div>
-                <div class="checklist-item">BI-RADS 0: Immediate CEM if available</div>
-            </div>
-            
-            <h3 style="color: #4a90e2; margin-top: 30px;">Critical Success Factors</h3>
-            
-            <div class="alert alert-info">
-                <strong>Technology Requirements:</strong>
-                <ul style="margin-top: 10px; padding-left: 20px;">
-                    <li>High-quality primary screening (16-bit recommended)</li>
-                    <li>AI triage capability for immediate risk stratification</li>
-                    <li>Same-day supplemental screening availability</li>
-                    <li>Integrated reporting system</li>
-                </ul>
+                <div class="checklist-item">BI-RADS 0: Consider same-day or next-day CEM</div>
             </div>
             
             <div class="alert alert-info">
-                <strong>Staffing Considerations:</strong>
-                <ul style="margin-top: 10px; padding-left: 20px;">
-                    <li>Cross-trained technologists (mammography + ABUS)</li>
-                    <li>Dedicated ABUS time slots (30% of dense patients)</li>
-                    <li>Radiologist availability for immediate reads</li>
-                    <li>Patient navigator for same-day coordination</li>
+                <strong>💡 Implementation Timeline Note:</strong>
+                <p style="margin-top: 10px;">Technology implementation timelines vary significantly by facility size, existing infrastructure, and vendor. Typical ranges:</p>
+                <ul style="margin-top: 5px; padding-left: 20px;">
+                    <li>AI Software Integration: 2-4 weeks</li>
+                    <li>ABUS Installation: 4-8 weeks</li>
+                    <li>Full Workflow Optimization: 2-3 months</li>
+                    <li>Staff Training & Adoption: Ongoing</li>
                 </ul>
-            </div>
-            
-            <h3 style="color: #ff6b9d; margin-top: 30px;">Patient Communication Scripts</h3>
-            
-            <div class="checklist">
-                <h3>For Dense Breast Patients</h3>
-                <div style="background: #f8f9fb; padding: 20px; border-radius: 8px; margin: 10px 0;">
-                    <p><strong>Script:</strong> "Your mammogram shows you have dense breast tissue, which is completely normal - about half of all women do. Because dense tissue can make it harder to see potential problems, we'd like to do an additional ultrasound scan today. This will give us a more complete picture and you'll have all your results before you leave."</p>
-                </div>
-            </div>
-            
-            <div class="checklist">
-                <h3>For High AI Score Patients</h3>
-                <div style="background: #f8f9fb; padding: 20px; border-radius: 8px; margin: 10px 0;">
-                    <p><strong>Script:</strong> "Our AI system has flagged an area that needs a closer look. This doesn't mean anything is wrong - it's just being extra cautious. We can do some additional imaging right now to get a clearer picture, so you won't have to come back or wait for results."</p>
-                </div>
             </div>
             
             <div class="citation-section">
                 <h4>Citations:</h4>
-                <p><sup>9</sup> Dabbous FM, et al. Patient Prefer Adherence. 2019;13:333-343.</p>
-                <p><sup>10</sup> Shah C, et al. BMC Women's Health. 2022;22:147.</p>
-                <p><sup>11</sup> Same-day workflows reduce anxiety and improve adherence, helping decrease missed appointments. JAMA Intern Med. 2021.</p>
+                <p><sup>1</sup> Shah BA, Mirchandani A, Abrol S. Impact of same day screening mammogram results on women's satisfaction and overall breast cancer screening experience: a quality improvement survey analysis. BMC Womens Health. 2022;22(1):338.</p>
+                <p><sup>2</sup> Gur D, et al. Impact of same-day screening mammography availability: results of a controlled clinical trial. Arch Intern Med. 1999;159(4):393-8.</p>
             </div>
         </div>
         
         <!-- Footer -->
         <footer class="footer">
             <h3>Ready to Transform Your Dense Breast Program?</h3>
-            <p style="margin-bottom: 30px;">Get personalized implementation support from Browns Medical Imaging</p>
+            <p style="margin-bottom: 30px;">Get personalized implementation support</p>
             
             <div class="contact-box">
-                <h4 style="margin-bottom: 15px;">Contact Our Women's Imaging Specialist</h4>
+                <h4 style="margin-bottom: 15px;">Consult Todd for facility-specific recommendations</h4>
                 <p><strong>Todd Derohanian</strong></p>
-                <p>📧 <a href="mailto:tderohanian@brownsmedicalimaging.com">tderohanian@brownsmedicalimaging.com</a></p>
                 <p style="margin-top: 20px;">
                     <a href="https://api.leadconnectorhq.com/widget/bookings/radiology-ai-demo" class="btn btn-primary">Schedule Your Consultation</a>
                 </p>
             </div>
             
             <p style="margin-top: 30px; opacity: 0.8; font-size: 0.9em;">
-                © 2025 Browns Medical Imaging. All rights reserved.<br>
-                This kit is for educational purposes and should not replace professional medical or legal advice.
+                © 2025 All rights reserved.<br>
+                This kit is for educational purposes only. Consult qualified professionals for facility-specific recommendations.
             </p>
         </footer>
     </div>
@@ -1300,111 +1203,82 @@
             return isNaN(parsed) ? defaultValue : parsed;
         }
         
-        // Enhanced AI ROI Calculator
-        function calculateAIROI() {
-            const systemType = document.getElementById('ai-system-type').value;
-            const volume = safeParseFloat(document.getElementById('ai-volume').value, 10000);
-            const dailyExams = safeParseFloat(document.getElementById('ai-daily-exams').value, 50);
-            const radRate = safeParseFloat(document.getElementById('ai-rad-rate').value, 400);
-            const callbackRate = safeParseFloat(document.getElementById('ai-callback-rate').value, 10) / 100;
-            const densePercent = safeParseFloat(document.getElementById('ai-dense-percent').value, 50) / 100;
-            const aiCostInput = document.getElementById('ai-cost').value;
-            const aiCost = aiCostInput ? safeParseFloat(aiCostInput) : null;
+        // Callback ROI Calculator - Updated with lost revenue
+        function calculateCallbackROI() {
+            const volume = safeParseFloat(document.getElementById('callback-volume').value, 5000);
+            const callbackRate = safeParseFloat(document.getElementById('callback-rate').value, 10.8) / 100;
+            const mammogramRevenue = safeParseFloat(document.getElementById('callback-mammogram-revenue').value, 250);
+            const radRate = safeParseFloat(document.getElementById('callback-rad-rate').value, 300);
+            const techRate = safeParseFloat(document.getElementById('callback-tech-rate').value, 45);
+            const techStack = document.getElementById('callback-tech-stack').value;
             
-            // Update system name display
-            const systemNames = {
-                'hologic': 'Hologic',
-                'ge': 'GE',
-                'siemens': 'Siemens',
-                'fuji': 'Fuji',
-                'other': 'imaging'
+            // Technology-specific callback reduction rates - conservative
+            const reductionRates = {
+                'transpara': 0.175,  // 17.5% (middle of 15-20%)
+                'volpara': 0.09,     // 9% (middle of 8-10%)
+                'sofia': 0.11,       // 11% (middle of 10-12%)
+                'combined': 0.225    // 22.5% (middle of 20-25%)
             };
-            document.getElementById('ai-system-name').textContent = systemNames[systemType];
             
-            // Calculate time savings based on MASAI trial
-            // Average reading time calculation based on daily exams
-            const hoursPerDay = 8; // Standard workday
-            const minutesPerExam = (hoursPerDay * 60) / dailyExams;
-            const timeSavedPerExam = minutesPerExam * 0.443; // 44.3% reduction
+            const callbackReduction = reductionRates[techStack];
+            
+            // Current state calculations
+            const currentCallbacks = Math.round(volume * callbackRate);
+            const callbacksAvoided = Math.round(currentCallbacks * callbackReduction);
+            
+            // Lost revenue from patients who don't return after callbacks
+            const noShowRate = 0.15; // 15% of callbacks don't return
+            const lostRevenue = callbacksAvoided * noShowRate * mammogramRevenue;
+            
+            // Operational cost calculations (conservative estimate)
+            const costPerCallback = 400; // Using conservative $400 per callback
+            const operationalSavings = callbacksAvoided * costPerCallback;
+            
+            const totalSavings = lostRevenue + operationalSavings;
+            
+            // Update display
+            document.getElementById('callback-current-callbacks').textContent = currentCallbacks.toLocaleString();
+            document.getElementById('callback-avoided').textContent = callbacksAvoided.toLocaleString();
+            document.getElementById('callback-lost-revenue').textContent = Math.round(lostRevenue).toLocaleString();
+            document.getElementById('callback-operational-savings').textContent = Math.round(operationalSavings).toLocaleString();
+            document.getElementById('callback-total-roi').textContent = Math.round(totalSavings).toLocaleString();
+            
+            // Show results
+            document.getElementById('callback-results').classList.add('show');
+        }
+        
+        // AI ROI Calculator - Updated with callback benefit
+        function calculateAIROI() {
+            const volume = safeParseFloat(document.getElementById('ai-volume').value, 10000);
+            const readTime = safeParseFloat(document.getElementById('ai-read-time').value, 5);
+            const callbackRate = safeParseFloat(document.getElementById('ai-callback-rate').value, 10.8) / 100;
+            const radRate = safeParseFloat(document.getElementById('ai-rad-rate').value, 400);
+            const aiCost = safeParseFloat(document.getElementById('ai-cost').value, 0);
+            
+            // Calculate time savings based on MASAI trial (44% reduction)
+            const timeSavedPerExam = readTime * 0.44;
             const totalMinutesSaved = timeSavedPerExam * volume;
             const hoursSaved = totalMinutesSaved / 60;
             
-            // Calculate hours saved per radiologist per day
-            const workingDays = 250; // Typical working days per year
-            const dailyHoursSaved = hoursSaved / workingDays;
-            
             // Calculate capacity increase
-            const capacityIncrease = 44.3; // Can handle 44.3% more with same time
-            const additionalExamsPossible = Math.round(volume * 0.443);
+            const capacityIncrease = 44; // 44% more capacity
             
-            // Calculate financial value
-            const efficiencyValue = hoursSaved * radRate;
-            
-            // Calculate callback savings (40% reduction from MASAI)
+            // Calculate callback reduction benefit (20% reduction with AI)
             const currentCallbacks = volume * callbackRate;
-            const callbacksReduced = Math.round(currentCallbacks * 0.40);
-            const callbackCost = 500; // Average cost per callback
-            const callbackSavings = callbacksReduced * callbackCost;
-            
-            // Calculate dense breast patients
-            const densePatients = Math.round(volume * densePercent);
-            
-            // Total benefit
-            const totalBenefit = efficiencyValue + callbackSavings;
+            const callbacksAvoided = currentCallbacks * 0.20;
+            const callbackBenefit = callbacksAvoided * 400; // $400 per callback
             
             // Update display
             document.getElementById('ai-hours-saved').textContent = Math.round(hoursSaved).toLocaleString();
-            document.getElementById('ai-hours-per-rad').textContent = dailyHoursSaved.toFixed(1);
-            document.getElementById('ai-capacity-increase').textContent = capacityIncrease.toFixed(0);
-            document.getElementById('ai-additional-exams').textContent = additionalExamsPossible.toLocaleString();
-            document.getElementById('ai-annual-value').textContent = Math.round(efficiencyValue).toLocaleString();
-            document.getElementById('ai-callback-savings').textContent = Math.round(callbackSavings).toLocaleString();
-            document.getElementById('ai-callbacks-reduced').textContent = callbacksReduced.toLocaleString();
-            document.getElementById('ai-dense-patients').textContent = densePatients.toLocaleString();
-            
-            // Show/hide ROI elements based on whether cost was entered
-            const investmentRow = document.querySelector('.roi-metric:has(#ai-investment)').parentElement;
-            const roiTotalDiv = document.querySelector('.roi-total');
-            
-            if (aiCost !== null) {
-                // User entered a cost - show full ROI calculation
-                const netROI = totalBenefit - aiCost;
-                const paybackMonths = aiCost > 0 ? (aiCost / totalBenefit) * 12 : 0;
-                
-                document.getElementById('ai-investment').textContent = aiCost.toLocaleString();
-                document.getElementById('ai-net-roi').textContent = Math.round(netROI).toLocaleString();
-                document.getElementById('ai-payback').textContent = Math.round(paybackMonths);
-                
-                // Show investment row
-                investmentRow.style.display = 'flex';
-                
-                // Update ROI total section for net ROI
-                roiTotalDiv.innerHTML = `
-                    <h4>Net Annual ROI</h4>
-                    <div class="amount">$<span id="ai-net-roi">${Math.round(netROI).toLocaleString()}</span></div>
-                    <p style="font-size: 1em; margin-top: 10px;">
-                        Payback period: <span id="ai-payback">${Math.round(paybackMonths)}</span> months
-                    </p>
-                `;
-            } else {
-                // No cost entered - show gross benefits only
-                investmentRow.style.display = 'none';
-                
-                // Update ROI total section for gross benefits
-                roiTotalDiv.innerHTML = `
-                    <h4>Total Annual Benefit</h4>
-                    <div class="amount">${Math.round(totalBenefit).toLocaleString()}</div>
-                    <p style="font-size: 1em; margin-top: 10px; opacity: 0.9;">
-                        To calculate net ROI, enter your estimated AI cost above
-                    </p>
-                `;
-            }
+            document.getElementById('ai-time-saved').textContent = timeSavedPerExam.toFixed(1);
+            document.getElementById('ai-capacity-increase').textContent = capacityIncrease;
+            document.getElementById('ai-callback-benefit').textContent = Math.round(callbackBenefit).toLocaleString();
             
             // Show results
             document.getElementById('ai-results').classList.add('show');
         }
         
-        // Input validation - prevent non-numeric input
+        // Input validation
         document.addEventListener('DOMContentLoaded', function() {
             const inputs = document.querySelectorAll('input[type="number"]');
             inputs.forEach(input => {
